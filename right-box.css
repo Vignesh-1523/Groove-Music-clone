@@ -1,0 +1,22 @@
+/* .section{
+    max-height: 100%;
+} */
+.home{
+    background: red;
+}
+.music{
+    background: blue;
+    display: none;
+}
+.video{
+    background: green;
+    display: none;
+}
+.playqueue{
+    background: yellow;
+    display: none;
+}
+.playlist{
+    background: fuchsia;
+    display: none;
+}

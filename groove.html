@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groove Music Clone</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="groove.css">
+    <link rel="stylesheet" href="right-box.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="music.css">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <!-- Container of music website starts here -->
+    <section>
+        <!-- left portion of the section starts here -->
+            <div class="left-box">
+                <div class="logo-and-arrow">
+                    <!-- <span>arrow</span> -->
+                    <i class="lni lni-arrow-left"></i>
+                    <ion-icon name="caret-forward-outline"></ion-icon>
+                    <div class="logo">Media player</div>
+                </div>
+                <div class="menu-icon" style="display: none;">menu</div>
+                <div class="search">
+                    <input type="text" class="search-bar" placeholder="Search">
+                    <!-- <i class='bx bx-search'></i> -->
+                    <i class="lni lni-search-alt"></i>
+                </div>
+                <div class="navbar">
+                    <ul>
+                        <li><a href="#home"><i class="lni lni-home"></i> Home</a></li>
+                        <li><a href="#music"><i class="lni lni-music"></i> Music library</a></li>
+                        <li><a href="#video"><i class='bx bx-movie-play' id="video-icon"></i> Video library</a></li>
+                        <hr>
+                        <li><a href="#playqueue"><ion-icon name="albums-outline"></ion-icon> Playqueue</a></li>
+                        <li><a href="#playlist"><i class='bx bxs-playlist' id="playlist-icon"></i> Playlist <!-- <ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline"></ion-icon> --></a></li>
+                    </ul>
+                </div>
+            </div>
+        <!-- left portion of the section ends here -->
+
+        <!-- right portion of the section starts here -->
+            <div class="right-box">
+                <!-- home section starts here -->
+                <section class="home section" id="home">
+                    <header>
+                        <div class="head-contents">
+                            <h1>Home</h1>
+                            <p>Recent media</p> 
+                        </div>
+                    </header>
+                    <div class="content" id="homeContent">
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="media-card">
+                                <img src="https://images.firstpost.com/wp-content/uploads/2019/11/adithya-varma-380-feature.jpg" alt="">
+                            </div>
+                            <div class="media-contents">
+                                <p class="media-title">Edharkadi vali thanthai | aditya varma song by dhruv vikram</p>
+                                <span class="media-artist">Dhruv vikram</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- home section ends here -->
+                <!-- music section starts here -->
+                <section class="music section" id="music">
+                  <!-- popup forms for adding songs starts here -->
+                  <div class="form" id="form">
+
+                    <label for="movie">Movie title</label>
+                    <input type="text" id="movie" placeholder="Unknown">
+
+                    <label for="artist">Singer name</label>
+                    <input type="text" id="artist" placeholder="Unknown">
+
+                    <label for="url">Image URL of movie / song</label>
+                    <input type="url" id="url" placeholder="www.Image.jpeg"> 
+
+                    <label>Upload music</label>
+                    <input type="file" id="song-file">
+
+                  <div class="buttons">
+                    <i class='bx bx-send' id="send"></i>
+                    <button class="close" id="close">close</button>
+                  </div>
+
+                  </div>
+                   <!-- popup form for adding songs ends here -->
+                  <header>
+                    <div class="head-contents">
+                        <h1>Music </h1>
+                        <p>Recent media</p> 
+                    </div>
+                    <div class="add-songs" id="open" onclick="openPopup()">
+                      <span>add song from folder</span>
+                    </div>
+                </header>
+                <div class="content" id="musicContent">
+                  <div>
+                    <!-- <i class='bx bx-square-rounded'></i>
+                    <i class="lni lni-play"></i> -->
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>movie name</span>
+                    <span>time</span>
+                  </div> 
+                  <div>
+                    <!-- <i class='bx bx-square-rounded'></i>
+                    <i class="lni lni-play"></i> -->
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>movie name</span>
+                    <span>time</span>
+                  </div> 
+                  <div>
+                    <!-- <i class='bx bx-square-rounded'></i>
+                    <i class="lni lni-play"></i> -->
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>movie name</span>
+                    <span>time</span>
+                  </div> 
+                  <div>
+                    <!-- <i class='bx bx-square-rounded'></i>
+                    <i class="lni lni-play"></i> -->
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>movie name</span>
+                    <span>time</span>
+                  </div> 
+                  <div>
+                    <!-- <i class='bx bx-square-rounded'></i>
+                    <i class="lni lni-play"></i> -->
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>movie name</span>
+                    <span>time</span>
+                  </div> 
+                  <div>
+                    <!-- <i class='bx bx-square-rounded'></i>
+                    <i class="lni lni-play"></i> -->
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>movie name</span>
+                    <span>time</span>
+                  </div> 
+                  <div>
+                    <!-- <i class='bx bx-square-rounded'></i>
+                    <i class="lni lni-play"></i> -->
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>movie name</span>
+                    <span>time</span>
+                  </div> 
+                  <div>
+                    <!-- <i class='bx bx-square-rounded'></i>
+                    <i class="lni lni-play"></i> -->
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>movie name</span>
+                    <span>time</span>
+                  </div> 
+                  <div>
+                    <!-- <i class='bx bx-square-rounded'></i>
+                    <i class="lni lni-play"></i> -->
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>movie name</span>
+                    <span>time</span>
+                  </div> 
+                  <div>
+                    <!-- <i class='bx bx-square-rounded'></i>
+                    <i class="lni lni-play"></i> -->
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>movie name</span>
+                    <span>time</span>
+                  </div> 
+                  <div>
+                    <!-- <i class='bx bx-square-rounded'></i>
+                    <i class="lni lni-play"></i> -->
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>movie name</span>
+                    <span>time</span>
+                  </div> 
+                  <div>
+                    <!-- <i class='bx bx-square-rounded'></i>
+                    <i class="lni lni-play"></i> -->
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>movie name</span>
+                    <span>time</span>
+                  </div> 
+                  <div>
+                    <!-- <i class='bx bx-square-rounded'></i>
+                    <i class="lni lni-play"></i> -->
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>movie name</span>
+                    <span>time</span>
+                  </div> 
+                  <div>
+                    <!-- <i class='bx bx-square-rounded'></i>
+                    <i class="lni lni-play"></i> -->
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>movie name</span>
+                    <span>time</span>
+                  </div> 
+                  <div>
+                    <!-- <i class='bx bx-square-rounded'></i>
+                    <i class="lni lni-play"></i> -->
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>movie name</span>
+                    <span>time</span>
+                  </div> 
+                  <div>
+                    <!-- <i class='bx bx-square-rounded'></i>
+                    <i class="lni lni-play"></i> -->
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>movie name</span>
+                    <span>time</span>
+                  </div> 
+                  <div>
+                    <!-- <i class='bx bx-square-rounded'></i>
+                    <i class="lni lni-play"></i> -->
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>movie name</span>
+                    <span>time</span>
+                  </div> 
+                  <div>
+                    <!-- <i class='bx bx-square-rounded'></i>
+                    <i class="lni lni-play"></i> -->
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>movie name</span>
+                    <span>time</span>
+                  </div> 
+                  <div>
+                    <!-- <i class='bx bx-square-rounded'></i>
+                    <i class="lni lni-play"></i> -->
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>movie name</span>
+                    <span>time</span>
+                  </div> 
+                  <div>
+                    <!-- <i class='bx bx-square-rounded'></i>
+                    <i class="lni lni-play"></i> -->
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+                    <span>movie name</span>
+                    <span>time</span>
+                  </div> 
+                </div>
+                </section>
+                <!-- music section ends here -->
+                <section class="video section" id="video">video</section>
+                <section class="playqueue section" id="playqueue">playqueue</section>
+                <section class="playlist section" id="playlist">playlist</section>
+            </div>
+        <!-- right portion of the section ends here -->
+    </section>
+
+    <footer>
+        <audio id="audioPlayer" src="96 Songs _ The Life of Ram Video Song _ Vijay Seth(MP3_160K).mp3"></audio>
+
+        <div class="timeLine">
+          <span id="playingDuration">0:00:00</span>
+
+          <div id="durationRangeContainer">
+            <input type="range" id="durationRange" min="0" max="100" value="0">
+            <div id="progressBar"></div>
+            <div class="thumb"></div>
+          </div>
+
+          <span id="totalDuration">0:00:00</span>
+        </div>
+
+        <div class="buttons_and_template">
+          <div class="template">
+            <div class="image">
+              <img src="https://m.media-amazon.com/images/M/MV5BMGI5MGIwNjYtMWMzNS00MzViLWExYzUtYjRiZjAxNjg5NzUxXkEyXkFqcGdeQXVyMTU0ODI1NTA2._V1_.jpg" alt="" class="temp_img" id="temp_img">
+            </div>
+            <div class="temp_song">
+              <span class="large" id="large">Edharkadi vali thanthai | aditya varma song by dhruv vikram</span>
+              <span class="small" id="small">Edharkadi vali thanthai | aditya varma song by dhruv vikram | aditya varma song by dhruv vikram</span> 
+            </div>
+          </div>
+        <div class="control-icons">
+          <img src="icon-images/suffle (1).png" alt="" id="suffle-img" class="controls">
+          <img src="icon-images/back.png" alt="" id="previous-img" class="controls">
+
+          <div class="play-pause">
+          <img src="icon-images/play.png" alt="" id="play-img" class="controls">
+          <!-- <img src="icon-images/pause.png" alt="" class="controls"> -->
+         </div>
+
+          <img src="icon-images/back (2).png" alt="" id="next-img" class="controls">
+          <img src="icon-images/repeat (1).png" alt="" id="repeat-img" class="controls">
+        </div>
+        </div>
+        
+    </footer>
+ <!--   Container of music website ends here -->
+
+
+ <script src="groove.js"></script>
+
+     <script>
+        let atag = document.querySelectorAll("a");
+
+        let home = document.querySelector(".home");
+        let music = document.querySelector(".music");
+        let video = document.querySelector(".video");
+        let playqueue = document.querySelector(".playqueue");
+        let playlist = document.querySelector(".playlist");
+
+        var sections = [home, music, video, playqueue, playlist];
+
+        atag.forEach(element => {
+            element.addEventListener('click', () => {
+                sections.forEach(e => {
+                    var x = e.getAttribute('id');
+                    var y = document.getElementById(x);
+                    x = "#" + x;
+                    if(element.getAttribute('href') == x){
+                        y.style.display = "block";
+                    } else{
+                        y.style.display = "none";
+                    }
+                }); 
+            });
+        });
+    </script> 
+
+</body>
+</html>

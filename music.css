@@ -1,0 +1,224 @@
+.add-songs{
+    position: absolute;
+    right: 0;
+    top: 60px;
+    font-size: 14px;
+    border: 1px solid black;
+    background-color: orangered;
+    color: black;
+    padding: 10px;
+    margin-right: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.form{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    top: 8%;
+    left: 30%;
+    width: 600px;
+    background-color: rgba(39, 39, 39, 0.705);
+    padding: 40px 50px 70px 50px;
+    border-radius: 10px;
+    backdrop-filter: blur(30px);
+    z-index: 99;
+    box-shadow: 0 0 30px black;
+    border: 1px solid rgba(87, 87, 87, 0.144);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+.form label{
+    margin-bottom: 7px;
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.589);
+    /* text-decoration: underline; */
+}
+.form input{
+    width: 100%;
+    font-size: 13px;
+    font-weight: 300;
+    padding: 13px;
+    border: none;
+    outline: none;
+    background-color: rgba(20, 20, 20, 0.568);
+    color: rgb(212, 212, 212);
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+input:focus{
+    outline: 1px solid rgb(201, 201, 201);
+}
+input::placeholder{
+    color: rgba(201, 201, 201, 0.493);
+}
+input[type="file"]{
+    color: rgba(201, 201, 201, 0.493);
+}
+input[type="file"]::file-selector-button{
+    border: none;
+    outline: none;
+    font-family: 'Poppins';
+    margin-right: 10px;
+    background-color: black;
+    color: grey;
+    border: 1px solid rgba(255, 81, 0, 0.548);
+}
+.buttons{
+    position: absolute;
+    background-color: rgb(15, 15, 15);
+    height: 75px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    margin-bottom: -10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top: 1px solid rgba(87, 87, 87, 0.753);
+}
+.close{
+    width: 300px;
+    margin-left: 150px;
+    position: absolute;
+    top: 2px;
+    left: 250px;
+    background-color: rgba(39, 39, 39, 0.705);
+    color: white;
+    border: none;
+    border: 1px solid rgba(87, 87, 87, 0.144);
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+#send{
+    font-size: 40px;
+    margin-left: 50px;
+    position: absolute;
+    top: 15px;
+    color: rgba(255, 94, 0, 0.767);
+    cursor: pointer;
+}
+.music{
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+}
+.music header{
+    width: 100%;
+    background: #181616;
+    color: white;
+    height: 10em;
+}
+.music header .head-contents{
+    position: absolute;
+    width: 100%;
+    margin-top: 35px;
+    /* background: grey; */
+    padding-left: 50px;
+    line-height: 2.2;
+}
+.music header h1{
+    font-size: 2.3em;
+    font-weight: 500;
+}
+.music header p{
+    font-size: 1.2em;
+    font-weight: 500;
+}
+.music .content{
+    max-width: 100%;
+    height: calc(100% - 10em);
+    background-color: #181616;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding: 10px 50px;
+}
+.music .content::-webkit-scrollbar{
+    -webkit-appearance: none;
+    width: 10px;
+    background-color: blue;
+}
+.music .content::-webkit-scrollbar-track{
+    background-color: black;
+}
+.music .content::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: linear-gradient(to bottom,rgb(141, 4, 141), rgb(0, 238, 255));
+}
+.music .content div{
+    width: 100%;
+    /* background-color: white; */
+    padding: 15px;
+    margin-bottom: 15px;
+    height: 45px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bx-square-rounded{
+    font-size: 26px;
+    color: rgba(0, 0, 0, 0.932);
+    opacity: 0;
+    transition: 0.5s;
+}
+.lni-play{
+    font-size: 20px;
+    color: rgba(243, 71, 3, 0.932);
+    margin-inline: 30px 15px;
+    padding: 5px 5px 5px 8px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: 0.3s;
+}
+.lni-play:hover{
+    background-color: rgb(37, 39, 34);
+}
+.music .content div span{
+    font-size: 12px;
+    font-weight: 200;
+    color: white;
+    margin-right: 15px;
+}
+.music .content div span:nth-child(1){
+    width: 400px;
+    /* background: green; */
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.music .content div span:nth-child(2){
+    width: 200px;
+    /* background: red; */
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.music .content div span:nth-child(3){
+    width: 200px;
+    /* background: blue; */
+}
+.music .content div span:nth-child(4){
+    width: 20px;
+}
+.music .content div:nth-child(odd){
+    background-color: rgba(211, 211, 211, 0.199);
+}
+.music .content div:hover{
+    background-color: rgba(211, 211, 211, 0.199);
+}
+
+.music .content div:hover .lni-play, 
+.music .content div:hover .bx-square-rounded{
+    opacity: 1;
+}

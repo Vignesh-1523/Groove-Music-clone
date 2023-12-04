@@ -244,17 +244,3 @@ console.log(audioPlayer);
 
 // Storing data in local storage
 localStorage.setItem('all_songs', JSON.stringify(all_songs));
-
-// Retrieving data from local storage
-document.addEventListener('DOMContentLoaded', function() {
-    let storedSongs = JSON.parse(localStorage.getItem('all_songs'));
-    if (storedSongs) {
-        // Display the stored songs on the page after it loads
-        storedSongs.forEach(song => {
-            // Create elements for each song and display them as they were created
-            // Add classes, attributes, and content to list based on song details
-            // Append list to music_content or home_content based on your original logic
-            song.listCreation();
-        });
-    }
-});

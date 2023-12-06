@@ -46,16 +46,22 @@ let send = document.getElementById("send");
 let popup = document.querySelector("#form");
 let close = document.querySelector("#close");
 
+let behind_form = document.querySelector(".masking");
+
 function openPopup() {
   popup.style.transition = "opacity 0.5s";
   popup.style.opacity = "1";
   popup.style.visibility = "visible";
+  behind_form.style.display = "block";
 }
 close.addEventListener('click', () => {
-    
   popup.style.opacity = "0";
   popup.style.visibility = "hidden";
   popup.style.transition = "0.5s";
+  behind_form.style.display = "none";
+})
+
+send.addEventListener('click', () => {
 
   // alert if any input field is left empty.
   /*  if (!image_url.value || !movie_name.value || !artist_name.value) return alert("Please fill out all fields!"); */

@@ -3,18 +3,102 @@ let audioPlayer = document.getElementById("audioPlayer");
 let durationRange = document.getElementById('durationRange');
 let progressBar = document.getElementById('progressBar');
 let thumb = document.querySelector(".thumb");
+
 let songContainer = document.querySelectorAll(".media-container");
+let songImage = document.querySelector("#temp_img");
+let largeSongName = document.querySelector(".large");
+let smallSongName = document.querySelector(".small");
 
-songContainer.forEach(e => {
-    e.addEventListener('click', () => {
-        audioPlayer.src = e.querySelector('audio').src;
-        console.log(audioPlayer);
-        playPauseButton.src = "icon-images/play.png";
-        play();
-    })
-})
 
- // now song functions..
+let previous = document.querySelector("#previous-img");
+let next = document.querySelector("#next-img");
+let suffle = document.querySelector("#suffle-img");
+let loop = document.querySelector("#repeat-img");
+
+let songArray = [];
+var currentSongIndex = 0;
+var loopFunc;
+songContainer.forEach((e, index) => {
+    const audioSrc = e.querySelector('audio').src;
+   /* loopFunc = () => {
+        audioSrc.loop = true;
+    } */
+ /*  loopFunc = () => {
+        const audioElement = e.querySelector('audio');
+        audioElement.setAttribute('loop', true);
+        console.log(audioElement);
+    } */
+    
+    songArray.push(audioSrc);
+        e.addEventListener('click', () => {
+        songImage.src = e.querySelector('img').src;
+        largeSongName.innerHTML = e.querySelector('p').innerHTML;
+        smallSongName.innerHTML = e.querySelector('p').innerHTML;
+        audioPlayer.src = audioSrc;
+
+        playSong();
+        currentSongIndex = index;
+    }); 
+});
+function changeDatas() {
+    songImage.src = songContainer[currentSongIndex].querySelector('img').src;
+    largeSongName.innerHTML = songContainer[currentSongIndex].querySelector('p').innerHTML;
+    smallSongName.innerHTML = songContainer[currentSongIndex].querySelector('p').innerHTML;
+}
+
+console.log(songArray);
+
+var isSuffle = false;
+var suffledSongIndex = [];
+var i = 1; 
+function playNext() {  
+    if(isSuffle == true){
+        let suffleIndex = Math.floor(Math.random() * songArray.length);
+        currentSongIndex = suffleIndex;
+        suffledSongIndex.push(currentSongIndex);
+        playCurrentSong();
+        console.log(currentSongIndex);
+        console.log(suffledSongIndex);
+    } else{
+        currentSongIndex = (currentSongIndex + 1) % songArray.length;
+        playCurrentSong();
+        console.log(currentSongIndex);
+    }  
+}
+
+function playPrevious() {
+    if(isSuffle == true){
+        currentSongIndex = suffledSongIndex[((suffledSongIndex.length - i - 1) + suffledSongIndex.length) % suffledSongIndex.length] ;
+        playCurrentSong();
+        i++;
+        console.log(currentSongIndex);
+    } else{
+        currentSongIndex = (currentSongIndex - 1 + songArray.length) % songArray.length;
+        playCurrentSong();
+        console.log(currentSongIndex);
+    }
+}
+
+function suffleSong() {
+    if(isSuffle == false){
+        isSuffle = true;
+        suffle.style.backgroundColor = "grey";
+        suffle.style.padding = "2px";
+        suffle.style.borderRadius = "5px";
+    } else{
+        isSuffle = false;
+        suffle.style.backgroundColor = "transparent";
+    }
+}
+
+function playCurrentSong() {
+    audioPlayer.pause();
+    audioPlayer.src = songArray[currentSongIndex];
+    changeDatas();
+    playSong();
+}
+
+// now song functions..
 let playingDuration = document.getElementById("playingDuration");
 let totalDuration = document.getElementById("totalDuration");
 
@@ -56,17 +140,38 @@ durationRange.addEventListener('input', () => {
     thumb.style.left = (percentage) + "%";
 });  
 
-function play() {
+function playSong() {
     if (audioPlayer.paused) {
-        audioPlayer.play();
+        audioPlayer.play().then(() => {
+            console.log("Playback started successfully");
+        }).catch(e => {
+            console.error("Error playing audio:", e);
+        });
         playPauseButton.src = "icon-images/pause.png";
         playPauseButton.style.width = "24px";
         playPauseButton.style.height = "24px";
     } else {
         audioPlayer.pause();
-        playPauseButton.src = "icon-images/play.png";
+        playPauseButton.src = "icon-images/play.png"; 
     }
-}
+  }
+
+// Event listener for play/pause button
 playPauseButton.addEventListener('click', () => {
-    play();
+    playSong();
 });   
+
+// Event listeners for next and previous buttons
+next.addEventListener('click', playNext);
+previous.addEventListener('click', playPrevious);
+
+// Event listener for suffle button
+suffle.addEventListener('click', suffleSong);
+
+// Event listener for loop button
+// loop.addEventListener('click', loopFunc());
+
+// Event listener to stop the song once it finishes
+audioPlayer.addEventListener('ended', () => {
+    playNext();
+});

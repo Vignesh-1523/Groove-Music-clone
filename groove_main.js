@@ -15,12 +15,40 @@ let next = document.querySelector("#next-img");
 let suffle = document.querySelector("#suffle-img");
 let loop = document.querySelector("#repeat-img");
 
+let music_content = document.getElementById("musicContent");
+
+
 let songArray = [];
+let songDetails = [];
+let details = [];
+
+let audDuration;
 var currentSongIndex = 0;
 songContainer.forEach((e, index) => {
     const audioSrc = e.querySelector('audio').src;
-   
     songArray.push(audioSrc);
+
+    // temportary audio tag to get song duration.
+    let aud = document.createElement('audio');
+    aud.src = audioSrc;
+    aud.addEventListener('loadedmetadata', function () {
+        console.log(this.duration);
+        audDuration = (this.duration / 60).toFixed(2);
+        console.log(audDuration);
+
+    // I push details into the array once the audio is loaded because if I give this outside the "audDuration" will not work because before song loads it tries to take value, at that time it is undefined so undefined will added into it.
+    details.push(e.querySelector('p').innerHTML);
+    details.push("unknown movie");
+    details.push(e.querySelector('span').innerHTML);
+    details.push(audDuration);
+    details.push(audioSrc);
+    details.push(e.querySelector('img').src);
+    songDetails.push(details);
+    
+    // I called this creation function because it depends on audDuration here. If I call this outside then undefined will store as duration.
+    listCreation();
+    })
+
         e.addEventListener('click', () => {
         songImage.src = e.querySelector('img').src;
         largeSongName.innerHTML = e.querySelector('p').innerHTML;
@@ -31,6 +59,60 @@ songContainer.forEach((e, index) => {
         currentSongIndex = index;
     }); 
 });
+
+console.log(songDetails);
+var list;
+
+  function listCreation() {
+    list = document.createElement('div');
+
+    for (let i = 0; i < 4; i++) {
+      list.appendChild(document.createElement('span'));
+    }
+
+    let audioFile = document.createElement('audio');
+    list.appendChild(audioFile);
+    audioFile.src = details[4];
+
+    let imageFile = document.createElement('img');
+    imageFile.style.display = "none";
+    list.appendChild(imageFile);
+    imageFile.src = details[5];
+
+    // here we select all the four span elements created inside the div element..
+    let spanElements = list.querySelectorAll('span');
+    let index = 0;
+    spanElements.forEach(span => {
+      span.innerHTML = details[index];
+      index++;
+    });
+        
+    music_content.appendChild(list);
+    details = []; // once updated details get removed.
+  }
+
+  // this has all created div elements - lists in it.
+  let totalList = music_content.querySelectorAll('div');
+
+  totalList.forEach((list, index) => {
+    list.addEventListener('click', () => {
+        songImage.src = list.querySelector('img').src;
+        // queryselectorAll get all span elements but simply querySelector will point the first span element.
+        largeSongName.innerHTML = list.querySelector('span').innerHTML;
+        smallSongName.innerHTML = list.querySelector('span').innerHTML;
+        audioPlayer.src = list.querySelector('audio').src;
+    
+        playSong();
+        currentSongIndex = index;
+      })    
+  })
+
+function changeDatasForList() {
+    songImage.src = totalList[currentSongIndex].querySelector('img').src;
+    largeSongName.innerHTML = totalList[currentSongIndex].querySelector('span').innerHTML;
+    smallSongName.innerHTML = totalList[currentSongIndex].querySelector('span').innerHTML;
+}
+
 function changeDatas() {
     songImage.src = songContainer[currentSongIndex].querySelector('img').src;
     largeSongName.innerHTML = songContainer[currentSongIndex].querySelector('p').innerHTML;
@@ -125,6 +207,7 @@ function playCurrentSong() {
     audioPlayer.pause();
     audioPlayer.src = songArray[currentSongIndex];
     changeDatas();
+    changeDatasForList();
     playSong();
 }
 

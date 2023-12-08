@@ -138,15 +138,16 @@ input[type="file"]::file-selector-button{
 }
 .music .content::-webkit-scrollbar{
     -webkit-appearance: none;
-    width: 10px;
-    background-color: blue;
+    width: 5px;
+    padding: 3px;
 }
 .music .content::-webkit-scrollbar-track{
-    background-color: black;
+    background-color: var(--mild-grey);
 }
 .music .content::-webkit-scrollbar-thumb{
-    border-radius: 10px;
-    background: linear-gradient(to bottom,rgb(141, 4, 141), rgb(0, 238, 255));
+    border-radius: 5px;
+    width: 5px;
+    background: grey; 
 }
 .music .content div{
     width: 100%;

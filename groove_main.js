@@ -17,18 +17,9 @@ let loop = document.querySelector("#repeat-img");
 
 let songArray = [];
 var currentSongIndex = 0;
-var loopFunc;
 songContainer.forEach((e, index) => {
     const audioSrc = e.querySelector('audio').src;
-   /* loopFunc = () => {
-        audioSrc.loop = true;
-    } */
- /*  loopFunc = () => {
-        const audioElement = e.querySelector('audio');
-        audioElement.setAttribute('loop', true);
-        console.log(audioElement);
-    } */
-    
+   
     songArray.push(audioSrc);
         e.addEventListener('click', () => {
         songImage.src = e.querySelector('img').src;
@@ -55,7 +46,7 @@ function playNext() {
     if(isSuffle == true){
         let suffleIndex = Math.floor(Math.random() * songArray.length);
         currentSongIndex = suffleIndex;
-        suffledSongIndex.push(currentSongIndex);
+        suffledSongIndex.unshift(currentSongIndex);
         playCurrentSong();
         console.log(currentSongIndex);
         console.log(suffledSongIndex);
@@ -68,7 +59,7 @@ function playNext() {
 
 function playPrevious() {
     if(isSuffle == true){
-        currentSongIndex = suffledSongIndex[((suffledSongIndex.length - i - 1) + suffledSongIndex.length) % suffledSongIndex.length] ;
+        currentSongIndex = suffledSongIndex[ (i + suffledSongIndex.length) % suffledSongIndex.length] ;
         playCurrentSong();
         i++;
         console.log(currentSongIndex);
@@ -82,12 +73,51 @@ function playPrevious() {
 function suffleSong() {
     if(isSuffle == false){
         isSuffle = true;
-        suffle.style.backgroundColor = "grey";
+        suffle.style.backgroundColor = "#353535";
         suffle.style.padding = "2px";
         suffle.style.borderRadius = "5px";
     } else{
         isSuffle = false;
         suffle.style.backgroundColor = "transparent";
+        suffle.style.padding = "0px";
+       // clearing all song index from the array so that completely new elements will add from first when suffle enabled.
+       suffledSongIndex = [];
+       console.log(suffledSongIndex);
+    }
+}
+// To loop the songs...
+let loopStatus = 'off';
+// It gives a dom exception to handle the song at this point because play() pause() exception occurs again here. It also occurs in some places in the above codes and thoes were cleared and handled successfully. Now here we are going to clear that issue by make sure that one eventlistener doesn't affect the other. So, that we remove previously set eventlisteners in loop function. By this everytime when the loop button gets clicked old eventlisteners removed first.
+
+// function to handle song end for looping
+function handleSongEndForLoop() {
+    console.log(loopStatus);
+    playCurrentSong();
+}
+// function to handle song end for playing next
+function handleSongEndForNext() {
+    console.log(loopStatus);
+    playNext();
+}
+
+function loopSong() {
+    // Remove any previously set event listeners
+    audioPlayer.removeEventListener('ended', handleSongEndForLoop);
+    audioPlayer.removeEventListener('ended', handleSongEndForNext);
+
+    if (loopStatus == 'off') {
+        loopStatus = 'on';
+        // Set new event listener for looping
+        audioPlayer.addEventListener('ended', handleSongEndForLoop);
+        loop.style.backgroundColor = "#353535";
+        loop.style.padding = "2px";
+        loop.style.borderRadius = "5px";
+    } else {
+        loopStatus = 'off';
+        // Set new event listener for playing next
+        audioPlayer.addEventListener('ended', handleSongEndForNext);
+        loop.style.backgroundColor = "transparent";
+        loop.style.padding = "0px";
     }
 }
 
@@ -150,9 +180,14 @@ function playSong() {
         playPauseButton.src = "icon-images/pause.png";
         playPauseButton.style.width = "24px";
         playPauseButton.style.height = "24px";
+        playPauseButton.style.marginRight = "19px";
     } else {
         audioPlayer.pause();
         playPauseButton.src = "icon-images/play.png"; 
+        playPauseButton.style.width = "28px";
+        playPauseButton.style.height = "28px";
+        playPauseButton.style.marginRight = "15px"; 
+        // to avoid icons place shift (little) I give this margin and diff size for both play and pause.
     }
   }
 
@@ -169,9 +204,6 @@ previous.addEventListener('click', playPrevious);
 suffle.addEventListener('click', suffleSong);
 
 // Event listener for loop button
-// loop.addEventListener('click', loopFunc());
+loop.addEventListener('click', loopSong);
 
-// Event listener to stop the song once it finishes
-audioPlayer.addEventListener('ended', () => {
-    playNext();
-});
+

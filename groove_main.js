@@ -23,7 +23,7 @@ let music_content = document.getElementById("musicContent");
 
 
 let songArray = [];
- let songDetails = [
+/* let songDetails = [
     ['Music from the Villain_s Point of View  - Beauty of Our Bane(MP3_160K).mp3', 'The Dark Knight', 'Unknown artist', '4.55', 'songs/Music from the Villain_s Point of View  - Beauty of Our Bane(MP3_160K).mp3', 'https://i.ytimg.com/vi/CunU1BiAv7Q/maxresdefault.jpg'],
     ['Chilla Chilla - Thunivu Lyric Song (Tamil) _ Ajith…umar _ H Vinoth _ Anirudh _ Ghibran(MP3_160K).mp3', 'Thunivu', 'Anirudh ravichander', '3.53', 'songs/Chilla Chilla - Thunivu Lyric Song (Tamil) _ Ajith Kumar _ H Vinoth _ Anirudh _ Ghibran(MP3_160K).mp3', 'https://static.moviecrow.com/gallery/20221212/209569-Thunivu%20Chilla%20Chilla.jpg'],
     ['Anjaan - Kadhal Aasai Video _ Suriya_ Samantha _ Yuvan _ Super Hit Love Song(MP3_160K).mp3', 'Anjaan', 'Yuvan', '5.04', 'songs/Anjaan - Kadhal Aasai Video _ Suriya_ Samantha _ Yuvan _ Super Hit Love Song(MP3_160K).mp3', 'https://i.ytimg.com/vi/UdZzW6QzN-s/maxresdefault.jpg'],
@@ -57,7 +57,7 @@ let songArray = [];
     ['Yelo Pullelo - Kannum Kannum Kollaiyadithaal _ Dul…Rakshan_Niranjani A _ Masala Coffee(M4A_128K).m4a', 'Kannum Kannum kollayadithal', 'Anirudh ravichander', '3.16', 'songs/Yelo Pullelo - Kannum Kannum Kollaiyadithaal _ Dulquer S_ Ritu V_Rakshan_Niranjani A _ Masala Coffee(M4A_128K).m4a', 'https://i.ytimg.com/vi/QDuGeXJdyd0/maxresdefault.jpg'],
     ['Sia- Never give up (music video)(MP3_160K).mp3', 'Album-Sia', 'Sia', '3.38', 'songs/Sia- Never give up (music video)(MP3_160K).mp3', 'https://i.ytimg.com/vi/FvRiOGRty9I/maxresdefault.jpg'],
     ['Sandhanam Theme Video - Vikram _ Kamal Haasan _ ANIRUDH RAVICHANDER _ Lokesh Kanagaraj(M4A_128K).m4a', 'Vikram', 'Anirudh ravichander', '1.43', 'songs/Sandhanam Theme Video - Vikram _ Kamal Haasan _ ANIRUDH RAVICHANDER _ Lokesh Kanagaraj(M4A_128K).m4a', 'https://i.ytimg.com/vi/SRoipNO7IoI/maxresdefault.jpg']
-];  
+];  */
 
 var currentSongIndex = 0;
 var list;
@@ -75,7 +75,7 @@ songContainer.forEach((e, index) => {
     }); 
 //  I commented this because in live server it works properly but from github live link it doesn't because song loading is not proper...
  
- listCreation();
+/* listCreation();
 
  
 function listCreation() {
@@ -103,7 +103,7 @@ function listCreation() {
     });
     
     music_content.appendChild(list);
-  } 
+  }   */
 }); 
 
 // console.log(songDetails);

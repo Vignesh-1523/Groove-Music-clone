@@ -23,7 +23,7 @@ let music_content = document.getElementById("musicContent");
 
 
 let songArray = [];
-let songDetails = [
+/* let songDetails = [
     ['Music from the Villain_s Point of View  - Beauty of Our Bane(MP3_160K).mp3', 'The Dark Knight', 'Unknown artist', '4.55', 'songs/Music%20from%20the%20V…w%20%20-%20Beauty%20of%20Our%20Bane(MP3_160K).mp3', 'https://i.ytimg.com/vi/CunU1BiAv7Q/maxresdefault.jpg'],
     ['Chilla Chilla - Thunivu Lyric Song (Tamil) _ Ajith…umar _ H Vinoth _ Anirudh _ Ghibran(MP3_160K).mp3', 'Thunivu', 'Anirudh ravichander', '3.53', 'songs/Chilla%20Chilla%20-%20…0Vinoth%20_%20Anirudh%20_%20Ghibran(MP3_160K).mp3', 'https://static.moviecrow.com/gallery/20221212/209569-Thunivu%20Chilla%20Chilla.jpg'],
     ['Anjaan - Kadhal Aasai Video _ Suriya_ Samantha _ Yuvan _ Super Hit Love Song(MP3_160K).mp3', 'Anjaan', 'Yuvan', '5.04', 'songs/Anjaan%20-%20Kadhal%20…van%20_%20Super%20Hit%20Love%20Song(MP3_160K).mp3', 'https://i.ytimg.com/vi/UdZzW6QzN-s/maxresdefault.jpg'],
@@ -57,7 +57,7 @@ let songDetails = [
     ['Yelo Pullelo - Kannum Kannum Kollaiyadithaal _ Dul…Rakshan_Niranjani A _ Masala Coffee(M4A_128K).m4a', 'Kannum Kannum kollayadithal', 'Anirudh ravichander', '3.16', 'songs/Yelo%20Pullelo%20-%20K…Niranjani%20A%20_%20Masala%20Coffee(M4A_128K).m4a', 'https://i.ytimg.com/vi/QDuGeXJdyd0/maxresdefault.jpg'],
     ['Sia- Never give up (music video)(MP3_160K).mp3', 'Album-Sia', 'Sia', '3.38', 'songs/Sia-%20Never%20give%20up%20(music%20video)(MP3_160K).mp3', 'https://i.ytimg.com/vi/FvRiOGRty9I/maxresdefault.jpg'],
     ['Sandhanam Theme Video - Vikram _ Kamal Haasan _ ANIRUDH RAVICHANDER _ Lokesh Kanagaraj(M4A_128K).m4a', 'Vikram', 'Anirudh ravichander', '1.43', 'songs/Sandhanam%20Theme%20Vi…AVICHANDER%20_%20Lokesh%20Kanagaraj(M4A_128K).m4a', 'https://i.ytimg.com/vi/SRoipNO7IoI/maxresdefault.jpg']
-];
+];  */
 
 var currentSongIndex = 0;
 var list;
@@ -73,7 +73,9 @@ songContainer.forEach((e, index) => {
         playSong();
         currentSongIndex = index;
     }); 
-    listCreation();
+ /*   I commented this because in live server it works properly but from github live link it doesn't because song loading is not proper...
+ 
+ listCreation();
     function listCreation() {
         list = document.createElement('div');
     
@@ -99,11 +101,10 @@ songContainer.forEach((e, index) => {
         });
         
         music_content.appendChild(list);
-      }
-});
+      } */
+}); 
 
-console.log(songDetails);
-
+// console.log(songDetails);
 
   // this has all created div elements - lists in it.
   let totalList = music_content.querySelectorAll('div');

@@ -9,14 +9,29 @@
     display: none;
 }
 .video{
-    background: green;
+    background: #242424;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     display: none;
 }
 .playqueue{
-    background: yellow;
+    background: #242424;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     display: none;
 }
 .playlist{
-    background: fuchsia;
+    background: #242424;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     display: none;
+}
+.video h1, .playqueue h1, .playlist h1{
+    font-size: 3em;
 }

@@ -251,11 +251,16 @@ section{
     margin-top: 22px;
     margin-bottom: 8px;
 }
-.lni-arrow-left{
+/* .lni-arrow-left{
     margin-left: 12px;
     margin-top: -4px;
+} */
+.logo-and-arrow .left-arrow{
+    font-size: 22px;
+    margin-left: 12px;
+    margin-top: -8px;
 }
-.logo-and-arrow ion-icon{
+.logo-and-arrow .lg{
     position: absolute;
     font-size: 15px;
     margin-left: 54px;

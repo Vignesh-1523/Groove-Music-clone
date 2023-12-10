@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="/icon-images/Music-icon.png" type="image/x-icon">
 
     <title>Groove Music Clone</title>
-    <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" /> -->
 
     <link rel="stylesheet" href="groove.css">
@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="music.css">
 
-    <!-- <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> -->
-    <!-- <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
     <!-- Container of music website starts here -->
@@ -28,13 +28,14 @@
         <div class="left-box">
             <div class="logo-and-arrow">
                 <!-- <i class="lni lni-arrow-left"></i> -->
-                <!-- <ion-icon name="caret-forward-outline"></ion-icon> -->
+                <ion-icon name="arrow-back-outline" class="left-arrow"></ion-icon>
+                <ion-icon name="caret-forward-outline" class="lg"></ion-icon>
                 <div class="logo">Media player</div>
             </div>
             <div class="menu-icon" style="display: none;">menu</div>
             <div class="search">
                 <input type="text" class="search-bar" placeholder="Search">
-                <!-- <i class="lni lni-search-alt"></i> -->
+                <i class="lni lni-search-alt"></i>
             </div>
             <div class="navbar">
                 <ul>
@@ -60,368 +61,7 @@
                     </div>
                 </header>
                 <div class="content" id="homeContent">
-             <!--       <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://i.ytimg.com/vi/CunU1BiAv7Q/maxresdefault.jpg" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">Music from the Villain_s Point of View  - Beauty of Our Bane(MP3_160K).mp3</p>
-                            <span class="media-artist">Unknown artist</span>
-                        </div>
-                        <audio src="songs/Music from the Villain_s Point of View  - Beauty of Our Bane(MP3_160K).mp3"></audio>
-                    </div>
-
-                    <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://static.moviecrow.com/gallery/20221212/209569-Thunivu%20Chilla%20Chilla.jpg" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">Chilla Chilla - Thunivu Lyric Song (Tamil) _ Ajith Kumar _ H Vinoth _ Anirudh _ Ghibran(MP3_160K).mp3</p>
-                            <span class="media-artist">Anirudh ravichander</span>
-                        </div>
-                        <audio src="songs/Chilla Chilla - Thunivu Lyric Song (Tamil) _ Ajith Kumar _ H Vinoth _ Anirudh _ Ghibran(MP3_160K).mp3"></audio>
-                    </div>
-
-                    <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://i.ytimg.com/vi/UdZzW6QzN-s/maxresdefault.jpg" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">Anjaan - Kadhal Aasai Video _ Suriya_ Samantha _ Yuvan _ Super Hit Love Song(MP3_160K).mp3</p>
-                            <span class="media-artist">Yuvan</span>
-                        </div>
-                        <audio src="songs/Anjaan - Kadhal Aasai Video _ Suriya_ Samantha _ Yuvan _ Super Hit Love Song(MP3_160K).mp3"></audio>
-                    </div>
-
-                    <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://i.ytimg.com/vi/yh2K9VlGj9Q/sddefault.jpg" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">Chammak Challo Telugu Version (Full Video) - Feat. Akon _ Kareena Kapoor _ Shahrukh(MP3_160K).mp3</p>
-                            <span class="media-artist">Akon</span>
-                        </div>
-                        <audio src="songs/Chammak Challo Telugu Version (Full Video) - Feat. Akon _ Kareena Kapoor _ Shahrukh(MP3_160K).mp3"></audio>
-                    </div>
-
-                    <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://c.saavncdn.com/342/Porkanda-Singam-Rendition-Tamil-2023-20230117160839-500x500.jpg" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">VIKRAM - Porkanda Singam Lyric _ Kamal Haasan _ Vijay Sethupathi _ Lokesh Kanagaraj _ Anirudh(M4A_128K).m4a</p>
-                            <span class="media-artist">Unknown artist</span>
-                        </div>
-                        <audio src="songs/VIKRAM - Porkanda Singam Lyric _ Kamal Haasan _ Vijay Sethupathi _ Lokesh Kanagaraj _ Anirudh(M4A_128K).m4a"></audio>
-                    </div>
-
-                    <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://c.saavncdn.com/artists/Fahadh_Faasil_002_20200321095850_500x500.jpg" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">Amar Theme Video _ Kamal Haasan _ ANIRUDH RAVICHANDER _ Fahadh Fazil _ Lokesh Kanagaraj(M4A_128K).m4a</p>
-                            <span class="media-artist">Anirudh ravichander</span>
-                        </div>
-                        <audio src="songs/Amar Theme Video _ Kamal Haasan _ ANIRUDH RAVICHANDER _ Fahadh Fazil _ Lokesh Kanagaraj(M4A_128K).m4a"></audio>
-                    </div>
-
-                    <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://i.ytimg.com/vi/VsfYxPqSclE/maxresdefault.jpg" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">Edharkadi Lyrical _ Adithya Varma Songs _ Dhruv Vikram_Banita Sandhu_ Gireesaaya _ Radhan(MP3_160K).mp3</p>
-                            <span class="media-artist">Dhruv vikram</span>
-                        </div>
-                        <audio src="songs/Edharkadi Lyrical _ Adithya Varma Songs _ Dhruv Vikram_Banita Sandhu_ Gireesaaya _ Radhan(MP3_160K).mp3"></audio>
-                    </div>
-
-                    <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/59/94/48/59944898-4d5b-922b-24eb-39fe8f19d1a9/cover.jpg/400x400cc.jpg" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">Yaen Yennai Pirindhaai Song_Lyrics _ SidSriram _ Adithya Varma _ Full Hd(M4A_128K).m4a</p>
-                            <span class="media-artist">Sid sriram</span>
-                        </div>
-                        <audio src="songs/Yaen Yennai Pirindhaai Song_Lyrics _ SidSriram _ Adithya Varma _ Full Hd(M4A_128K).m4a"></audio>
-                    </div>
-
-                    <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://e0.pxfuel.com/wallpapers/421/522/desktop-wallpaper-dhruv-vikram-poses-for-boy-couple-in-love-graphy-creative-profile-adithya-varma-love.jpg" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">ADITHYA VARMA _ SAD BGM _ WHATSAPP STATUS _ CRACKER EDITZ _lovefailure _pain _lonely _whatsappstatus(MP3_160K).mp3</p>
-                            <span class="media-artist">Unknown artist</span>
-                        </div>
-                        <audio src="songs/ADITHYA VARMA _ SAD BGM _ WHATSAPP STATUS _ CRACKER EDITZ _lovefailure _pain _lonely _whatsappstatus(MP3_160K).mp3"></audio>
-                    </div>
-
-                    <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://i.ytimg.com/vi/Cjp6RVrOOW0/maxresdefault.jpg" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">Aaron Smith - Dancin (KRONO Remix) - Lyrics(M4A_128K).m4a</p>
-                            <span class="media-artist">Aaron smith</span>
-                        </div>
-                        <audio src="songs/Aaron Smith - Dancin (KRONO Remix) - Lyrics(M4A_128K).m4a"></audio>
-                    </div>
-
-                    <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://www.slashfilm.com/img/gallery/every-song-we-heard-in-moon-knight-episode-1/l-intro-1648657429.jpg" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">[Moonknight] - A man without love(M4A_128K).m4a</p>
-                            <span class="media-artist">Unknown artist</span>
-                        </div>
-                        <audio src="songs/[Moonknight] - A man without love(M4A_128K).m4a"></audio>
-                    </div>
-
-                    <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://i.ytimg.com/vi/ZQsI6m66Xdo/maxresdefault.jpg" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">Cobra - Adheeraa Lyric _ Chiyaan Vikram _ _A. R. Rahman  _ Ajay Gnanamuthu _ 7 Screen Studio(M4A_128K).m4a</p>
-                            <span class="media-artist">Unknown artist</span>
-                        </div>
-                        <audio src="songs/Cobra - Adheeraa Lyric _ Chiyaan Vikram _ _A. R. Rahman  _ Ajay Gnanamuthu _ 7 Screen Studio(M4A_128K).m4a"></audio>
-                    </div>
-                        
-                    <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://m.media-amazon.com/images/I/612kccwPz-L._UXNaN_FMjpg_QL85_.jpg" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">Don Omar - Danza Kuduro (Lyrics) ft. Lucenzo(M4A_128K).m4a</p>
-                            <span class="media-artist">Don omar</span>
-                        </div>
-                        <audio src="songs/Don Omar - Danza Kuduro (Lyrics) ft. Lucenzo(M4A_128K).m4a"></audio>
-                    </div>
-
-                    <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://i.ytimg.com/vi/zIezTPSg_Uc/maxresdefault.jpg" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">songs/Full Song_ SAJAN BADE SENTI _ Badhaai Ho _ Ayushmann K _ Sanya M _ Dev N _ Harjot K(MP3_160K).mp3</p>
-                            <span class="media-artist">Hajrot k</span>
-                        </div>
-                        <audio src="songs/Full Song_ SAJAN BADE SENTI _ Badhaai Ho _ Ayushmann K _ Sanya M _ Dev N _ Harjot K(MP3_160K).mp3"></audio>
-                    </div>
-
-                    <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://i1.sndcdn.com/artworks-2fjnGhnBP5kKQiik-HejZmg-t500x500.jpg" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">Mehabooba (Tamil) KGF Chapter 2 _ RockingStar Yash _ Prashanth Neel _ Ravi Basrur(M4A_128K).m4a</p>
-                            <span class="media-artist">Unknown artist</span>
-                        </div>
-                        <audio src="songs/Full Video_ Mehabooba (Tamil) KGF Chapter 2 _ RockingStar Yash _ Prashanth Neel _ Ravi Basrur(M4A_128K).m4a"></audio>
-                    </div>
-
-                    <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://i.ytimg.com/vi/mRD0-GxqHVo/hqdefault.jpg?v=648204f5" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">Glass Animals - Heat Waves (Lyrics)(M4A_128K).m4a</p>
-                            <span class="media-artist">Unknown artist</span>
-                        </div>
-                        <audio src="songs/Glass Animals - Heat Waves (Lyrics)(M4A_128K).m4a"></audio>
-                    </div>
-
-                    <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://i.ytimg.com/vi/1F3hm6MfR1k/sddefault.jpg" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">JAILER - Hukum Lyric Video _ Superstar Rajinikanth _ Sun Pictures _ Anirudh _ Nelson(M4A_128K).m4a</p>
-                            <span class="media-artist">Anirudh ravichander</span>
-                        </div>
-                        <audio src="songs/JAILER - Hukum Lyric Video _ Superstar Rajinikanth _ Sun Pictures _ Anirudh _ Nelson(M4A_128K).m4a"></audio>
-                    </div>
-
-                    <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://images03.military.com/sites/default/files/styles/full/public/2023-05/1time%20john%20wick%205%20announced%201200.jpg" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">John Wick Bgm Ringtone __ Ringztube __ [ Download Link -- ](MP3_160K).mp3</p>
-                            <span class="media-artist">Unknown artist</span>
-                        </div>
-                        <audio src="songs/John Wick Bgm Ringtone __ Ringztube __ [ Download Link -- ](MP3_160K).mp3"></audio>
-                    </div>
-
-                    <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://upload.wikimedia.org/wikipedia/en/3/3c/Kesariya_song_cover.jpg" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">Kesariya - Brahmāstra _ Ranbir Kapoor _ Alia Bhatt _ Pritam _ Arijit Singh _ Amitabh Bhattacharya(M4A_128K).m4a</p>
-                            <span class="media-artist">Unknown artist</span>
-                        </div>
-                        <audio src="songs/Kesariya - Brahmāstra _ Ranbir Kapoor _ Alia Bhatt _ Pritam _ Arijit Singh _ Amitabh Bhattacharya(M4A_128K).m4a"></audio>
-                    </div>
-
-                    <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://www.koimoi.com/wp-content/new-galleries/2022/12/from-bike-to-underwater-sachet-parampara-tease-latest-track-malang-sajna-001.jpg" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">Malang Sajna [LYRICS]_ Sachet-Parampara _ Adil Shaikh_ Kumaar _ Lyrical India __ _347(MP3_160K).mp3</p>
-                            <span class="media-artist">Unknown artist</span>
-                        </div>
-                        <audio src="songs/Malang Sajna [LYRICS]_ Sachet-Parampara _ Adil Shaikh_ Kumaar _ Lyrical India __ _347(MP3_160K).mp3"></audio>
-                    </div>
-
-                    <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://i.ytimg.com/vi/MrzkoLKpgLU/maxresdefault.jpg" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">Mallipoo Video Song _ VTK _ HDR _ Silambarasan TR _ Gautham Vasudev Menon _   _A. R. Rahman _ Vels(MP3_160K).mp3</p>
-                            <span class="media-artist">Unknown artist</span>
-                        </div>
-                        <audio src="songs/Mallipoo Video Song _ VTK _ HDR _ Silambarasan TR _ Gautham Vasudev Menon _   _A. R. Rahman _ Vels(MP3_160K).mp3"></audio>
-                    </div>
-
-                    <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://i.ytimg.com/vi/ggjfqDPqLAk/mqdefault.jpg" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">Manase _ Official Music Video _ Dhruv Vikram _ Ujwal Gupta(MP3_160K).mp3</p>
-                            <span class="media-artist">Dhruv vikram</span>
-                        </div>
-                        <audio src="songs/Manase _ Official Music Video _ Dhruv Vikram _ Ujwal Gupta(MP3_160K).mp3"></audio>
-                    </div>
-
-                    <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://storage.googleapis.com/c.directlyrics.com/img/upload/maroon-5-animals-2.jpg" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">Maroon 5 - Animals (Lyrics)(M4A_128K).m4a</p>
-                            <span class="media-artist">Maroon</span>
-                        </div>
-                        <audio src="songs/Maroon 5 - Animals (Lyrics)(M4A_128K).m4a"></audio>
-                    </div>
-
-                    <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://i.ytimg.com/vi/hcJAgXUgFLY/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGEgSChlMA8=&rs=AOn4CLBcrIJzxlY_MKyQvhNT9Za3gH5Diw" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">Megham Karukatha - Official Lyric Video _ Thiruchitrambalam _ Dhanush _ Anirudh _ Sun Pictures(MP3_160K).mp3</p>
-                            <span class="media-artist">Dhanush</span>
-                        </div>
-                        <audio src="songs/Megham Karukatha - Official Lyric Video _ Thiruchitrambalam _ Dhanush _ Anirudh _ Sun Pictures(MP3_160K).mp3"></audio>
-                    </div>
-
-                    <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://i.ytimg.com/vi/uZ3OklmL0QE/maxresdefault.jpg" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">mudhal nee mudivum nee lyrics _ darbuka siva _ _kishen das _ Sid sriram _ meetha raghunath _ Harish(M4A_128K).m4a</p>
-                            <span class="media-artist">Sid sriram</span>
-                        </div>
-                        <audio src="songs/mudhal nee mudivum nee lyrics _ darbuka siva _ _kishen das _ Sid sriram _ meetha raghunath _ Harish(M4A_128K).m4a"></audio>
-                    </div>
-
-                    <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://i.ytimg.com/vi/REg_fqqzt_E/mqdefault.jpg" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">Hey Baby Video Song _ Raja Rani _ Aarya_ Jai_ Nayanthara_ Nazriya Nazim(M4A_128K).m4a</p>
-                            <span class="media-artist">Unknown artist</span>
-                        </div>
-                        <audio src="songs/Official _ Hey Baby Video Song _ Raja Rani _ Aarya_ Jai_ Nayanthara_ Nazriya Nazim(M4A_128K).m4a"></audio>
-                    </div>
-
-                    <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://i.ytimg.com/vi/ve2xFAxViuw/maxresdefault.jpg" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">Pouraadalaam Full Video Song _ M.S.Dhoni-Tamil _ Sushant Singh Rajput_ Kiara Advani(M4A_128K).m4a</p>
-                            <span class="media-artist">Unknown artist</span>
-                        </div>
-                        <audio src="songs/Pouraadalaam Full Video Song _ M.S.Dhoni-Tamil _ Sushant Singh Rajput_ Kiara Advani(M4A_128K).m4a"></audio>
-                    </div>
-
-                    <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://i.ytimg.com/vi/iCcPbnYF22w/maxresdefault.jpg" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">Rolex Entry Bgm _ Rolex Entry Full Bgm _ Lokiverse Bgm _ [Download Link](MP3_320K).mp3</p>
-                            <span class="media-artist">Unknown artist</span>
-                        </div>
-                        <audio src="songs/Rolex Entry Bgm _ Rolex Entry Full Bgm _ Lokiverse Bgm _ [Download Link](MP3_320K).mp3"></audio>
-                    </div>
-
-                    <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://m.timesofindia.com/photo/81292001/size-143830/81292001.jpg" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">Teddy _ En Iniya Thanimaye Song Lyric Video _ Arya(MP3_160K).mp3</p>
-                            <span class="media-artist">Sid sriram</span>
-                        </div>
-                        <audio src="songs/Teddy _ En Iniya Thanimaye Song Lyric Video _ Arya(MP3_160K).mp3"></audio>
-                    </div>
-
-                    <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://i.ytimg.com/vi/xzxr6fxdI_E/maxresdefault.jpg" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">Thani Oruvan - Kadhal Cricket Lyric _ Jayam Ravi_ Nayanthara _ Hiphop Tamizha(MP3_160K).mp3</p>
-                            <span class="media-artist">Hip hop Tamizha</span>
-                        </div>
-                        <audio src="songs/Thani Oruvan - Kadhal Cricket Lyric _ Jayam Ravi_ Nayanthara _ Hiphop Tamizha(MP3_160K).mp3"></audio>
-                    </div>
-
-                    <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://i.ytimg.com/vi/QDuGeXJdyd0/maxresdefault.jpg" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">Yelo Pullelo - Kannum Kannum Kollaiyadithaal _ Dulquer S_ Ritu V_Rakshan_Niranjani A _ Masala Coffee(M4A_128K).m4a</p>
-                            <span class="media-artist">Anirudh ravichander</span>
-                        </div>
-                        <audio src="songs/Yelo Pullelo - Kannum Kannum Kollaiyadithaal _ Dulquer S_ Ritu V_Rakshan_Niranjani A _ Masala Coffee(M4A_128K).m4a"></audio>
-                    </div>
-
-                    <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://i.ytimg.com/vi/FvRiOGRty9I/maxresdefault.jpg" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">Sia- Never give up (music video)(MP3_160K).mp3</p>
-                            <span class="media-artist">Sia</span>
-                        </div>
-                        <audio src="songs/Sia- Never give up (music video)(MP3_160K).mp3"></audio>
-                    </div>
-
-                    <div class="media-container">
-                        <div class="media-card">
-                            <img src="https://i.ytimg.com/vi/SRoipNO7IoI/maxresdefault.jpg" alt="">
-                        </div>
-                        <div class="media-contents">
-                            <p class="media-title">Sandhanam Theme Video - Vikram _ Kamal Haasan _ ANIRUDH RAVICHANDER _ Lokesh Kanagaraj(M4A_128K).m4a</p>
-                            <span class="media-artist">Unknown artist</span>
-                        </div>
-                        <audio src="songs/Sandhanam Theme Video - Vikram _ Kamal Haasan _ ANIRUDH RAVICHANDER _ Lokesh Kanagaraj(M4A_128K).m4a"></audio>
-                    </div>     -->
+                    <!-- music boxes are created here by javascript -->
                 </div>
             </section>
             <!-- home section ends here -->
@@ -462,85 +102,13 @@
                     </div>
                 </header>
                 <div class="content" id="musicContent">
-                    <!-- song lists are created here by javascript 
-                     <div>
-                        <span>Music from the Villain_s Point of View  - Beauty of Our Bane(MP3_160K).mp3</span>
-                        <span>The Dark Knight</span><span>Unknown artist</span>
-                        <span>4.55</span>
-                        <audio src="songs/Music from the Villain_s Point of View  - Beauty of Our Bane(MP3_160K).mp3"></audio>
-                        <img src="https://i.ytimg.com/vi/CunU1BiAv7Q/maxresdefault.jpg" style="display: none;">
-                    </div>
-
-                    <div><span>Chilla Chilla - Thunivu Lyric Song (Tamil) _ Ajith…umar _ H Vinoth _ Anirudh _ Ghibran(MP3_160K).mp3</span><span>Thunivu</span><span>Anirudh ravichander</span><span>3.53</span><audio src="songs/Chilla Chilla - Thunivu Lyric Song (Tamil) _ Ajith Kumar _ H Vinoth _ Anirudh _ Ghibran(MP3_160K).mp3"></audio><img src="https://static.moviecrow.com/gallery/20221212/209569-Thunivu%20Chilla%20Chilla.jpg" style="display: none;"></div>
-
-                    <div><span>Anjaan - Kadhal Aasai Video _ Suriya_ Samantha _ Yuvan _ Super Hit Love Song(MP3_160K).mp3</span><span>Anjaan</span><span>Yuvan</span><span>5.04</span><audio src="songs/Anjaan - Kadhal Aasai Video _ Suriya_ Samantha _ Yuvan _ Super Hit Love Song(MP3_160K).mp3"></audio><img src="https://i.ytimg.com/vi/UdZzW6QzN-s/maxresdefault.jpg" style="display: none;"></div>
-
-                    <div><span>Chammak Challo Telugu Version (Full Video) - Feat. Akon _ Kareena Kapoor _ Shahrukh(MP3_160K).mp3</span><span>Ra-One</span><span>Akon</span><span>3.40</span><audio src="songs/Chammak Challo Telugu Version (Full Video) - Feat. Akon _ Kareena Kapoor _ Shahrukh(MP3_160K).mp3"></audio><img src="https://i.ytimg.com/vi/yh2K9VlGj9Q/sddefault.jpg" style="display: none;"></div>
-
-                    <div><span>VIKRAM - Porkanda Singam Lyric _ Kamal Haasan _ Vi…upathi _ Lokesh Kanagaraj _ Anirudh(M4A_128K).m4a</span><span>Vikram</span><span>Unknown artist</span><span>3.18</span><audio src="songs/VIKRAM - Porkanda Singam Lyric _ Kamal Haasan _ Vijay Sethupathi _ Lokesh Kanagaraj _ Anirudh(M4A_128K).m4a"></audio><img src="https://c.saavncdn.com/342/Porkanda-Singam-Rendition-Tamil-2023-20230117160839-500x500.jpg" style="display: none;"></div>
-
-                    <div><span>Amar Theme Video _ Kamal Haasan _ ANIRUDH RAVICHAN…R _ Fahadh Fazil _ Lokesh Kanagaraj(M4A_128K).m4a</span><span>Vikram</span><span>Anirudh ravichander</span><span>2.26</span><audio src="songs/Amar Theme Video _ Kamal Haasan _ ANIRUDH RAVICHANDER _ Fahadh Fazil _ Lokesh Kanagaraj(M4A_128K).m4a"></audio><img src="https://c.saavncdn.com/artists/Fahadh_Faasil_002_20200321095850_500x500.jpg" style="display: none;"></div>
-
-                    <div><span>Edharkadi Lyrical _ Adithya Varma Songs _ Dhruv Vi…_Banita Sandhu_ Gireesaaya _ Radhan(MP3_160K).mp3</span><span>Aditya varma</span><span>Dhruv vikram</span><span>4.13</span><audio src="songs/Edharkadi Lyrical _ Adithya Varma Songs _ Dhruv Vikram_Banita Sandhu_ Gireesaaya _ Radhan(MP3_160K).mp3"></audio><img src="https://i.ytimg.com/vi/VsfYxPqSclE/maxresdefault.jpg" style="display: none;"></div>
-
-                    <div><span>Yaen Yennai Pirindhaai Song_Lyrics _ SidSriram _ Adithya Varma _ Full Hd(M4A_128K).m4a</span><span>Aditya varma</span><span>Sid sriram</span><span>3.18</span><audio src="songs/Yaen Yennai Pirindhaai Song_Lyrics _ SidSriram _ Adithya Varma _ Full Hd(M4A_128K).m4a"></audio><img src="https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/59/94/48/59944898-4d5b-922b-24eb-39fe8f19d1a9/cover.jpg/400x400cc.jpg" style="display: none;"></div>
-
-                    <div><span>ADITHYA VARMA _ SAD BGM _ WHATSAPP STATUS _ CRACKE…ilure _pain _lonely _whatsappstatus(MP3_160K).mp3</span><span>Aditya varma</span><span>Unknown artist</span><span>1.00</span><audio src="songs/ADITHYA VARMA _ SAD BGM _ WHATSAPP STATUS _ CRACKER EDITZ _lovefailure _pain _lonely _whatsappstatus(MP3_160K).mp3"></audio><img src="https://e0.pxfuel.com/wallpapers/421/522/desktop-wallpaper-dhruv-vikram-poses-for-boy-couple-in-love-graphy-creative-profile-adithya-varma-love.jpg" style="display: none;"></div>
-
-                    <div><span>Aaron Smith - Dancin (KRONO Remix) - Lyrics(M4A_128K).m4a</span><span>Album</span><span>Aaron smith</span><span>3.51</span><audio src="songs/Aaron Smith - Dancin (KRONO Remix) - Lyrics(M4A_128K).m4a"></audio><img src="https://i.ytimg.com/vi/Cjp6RVrOOW0/maxresdefault.jpg" style="display: none;"></div>
-
-                    <div><span>[Moonknight] - A man without love(M4A_128K).m4a</span><span>Moon knight</span><span>Unknown artist</span><span>3.17</span><audio src="songs/[Moonknight] - A man without love(M4A_128K).m4a"></audio><img src="https://www.slashfilm.com/img/gallery/every-song-we-heard-in-moon-knight-episode-1/l-intro-1648657429.jpg" style="display: none;"></div>
-
-                    <div><span>Cobra - Adheeraa Lyric _ Chiyaan Vikram _ _A. R. R…_ Ajay Gnanamuthu _ 7 Screen Studio(M4A_128K).m4a</span><span>Cobra</span><span>Unknown artist</span><span>4.51</span><audio src="songs/Cobra - Adheeraa Lyric _ Chiyaan Vikram _ _A. R. Rahman  _ Ajay Gnanamuthu _ 7 Screen Studio(M4A_128K).m4a"></audio><img src="https://i.ytimg.com/vi/ZQsI6m66Xdo/maxresdefault.jpg" style="display: none;"></div>
-
-                    <div><span>Don Omar - Danza Kuduro (Lyrics) ft. Lucenzo(M4A_128K).m4a</span><span>Fast and Furious</span><span>Don omar</span><span>3.17</span><audio src="songs/Don Omar - Danza Kuduro (Lyrics) ft. Lucenzo(M4A_128K).m4a"></audio><img src="https://m.media-amazon.com/images/I/612kccwPz-L._UXNaN_FMjpg_QL85_.jpg" style="display: none;"></div>
-
-                    <div><span>SAJAN BADE SENTI _ Badhaai Ho _ A…mann K _ Sanya M _ Dev N _ Harjot K(MP3_160K).mp3</span><span>Badhaai Ho</span><span>Hajrot k</span><span>2.45</span><audio src="songs/Full Song_ SAJAN BADE SENTI _ Badhaai Ho _ Ayushmann K _ Sanya M _ Dev N _ Harjot K(MP3_160K).mp3"></audio><img src="https://i.ytimg.com/vi/zIezTPSg_Uc/maxresdefault.jpg" style="display: none;"></div>
-
-                    <div><span>Mehabooba (Tamil) KGF Chapter 2 _ RockingStar Yash _ Prashanth Neel _ Ravi Basrur(M4A_128K).m4a</span><span>K G F Chapter-2</span><span>Unknown artist</span><span>4.02</span><audio src="songs/Full Video_ Mehabooba (Tamil) KGF Chapter 2 _ RockingStar Yash _ Prashanth Neel _ Ravi Basrur(M4A_128K).m4a"></audio><img src="https://i1.sndcdn.com/artworks-2fjnGhnBP5kKQiik-HejZmg-t500x500.jpg" style="display: none;"></div>
-
-                    <div><span>Glass Animals - Heat Waves (Lyrics)(M4A_128K).m4a</span><span>Album-Glass Animals</span><span>Unknown artist</span><span>3.56</span><audio src="songs/Glass Animals - Heat Waves (Lyrics)(M4A_128K).m4a"></audio><img src="https://i.ytimg.com/vi/mRD0-GxqHVo/hqdefault.jpg?v=648204f5" style="display: none;"></div>
-
-                    <div><span>JAILER - Hukum Lyric Video _ Superstar Rajinikanth _ Sun Pictures _ Anirudh _ Nelson(M4A_128K).m4a</span><span>Jailer</span><span>Anirudh ravichander</span><span>3.26</span><audio src="songs/JAILER - Hukum Lyric Video _ Superstar Rajinikanth _ Sun Pictures _ Anirudh _ Nelson(M4A_128K).m4a"></audio><img src="https://i.ytimg.com/vi/1F3hm6MfR1k/sddefault.jpg" style="display: none;"></div>
-
-                    <div><span>John Wick Bgm Ringtone __ Ringztube __ [ Download Link -- ](MP3_160K).mp3</span><span>John wick</span><span>Unknown artist</span><span>0.35</span><audio src="songs/John Wick Bgm Ringtone __ Ringztube __ [ Download Link -- ](MP3_160K).mp3"></audio><img src="https://images03.military.com/sites/default/files/styles/full/public/2023-05/1time%20john%20wick%205%20announced%201200.jpg" style="display: none;"></div>
-
-                    <div><span>Kesariya - Brahmāstra _ Ranbir Kapoor _ Alia Bhatt…Arijit Singh _ Amitabh Bhattacharya(M4A_128K).m4a</span><span>Brahmastra</span><span>Unknown artist</span><span>2.52</span><audio src="songs/Kesariya - Brahmāstra _ Ranbir Kapoor _ Alia Bhatt _ Pritam _ Arijit Singh _ Amitabh Bhattacharya(M4A_128K).m4a"></audio><img src="https://upload.wikimedia.org/wikipedia/en/3/3c/Kesariya_song_cover.jpg" style="display: none;"></div>
-
-                    <div><span>Malang Sajna [LYRICS]_ Sachet-Parampara _ Adil Shaikh_ Kumaar _ Lyrical India __ _347(MP3_160K).mp3</span><span>Sachet-parampara</span><span>Unknown artist</span><span>2.32</span><audio src="songs/Malang Sajna [LYRICS]_ Sachet-Parampara _ Adil Shaikh_ Kumaar _ Lyrical India __ _347(MP3_160K).mp3"></audio><img src="https://www.koimoi.com/wp-content/new-galleries/2022/12/from-bike-to-underwater-sachet-parampara-tease-latest-track-malang-sajna-001.jpg" style="display: none;"></div>
-
-                    <div><span>Mallipoo Video Song _ VTK _ HDR _ Silambarasan TR …udev Menon _   _A. R. Rahman _ Vels(MP3_160K).mp3</span><span>Vendhu Thaninthathu Kaadu</span><span>Unknown artist</span><span>4.00</span><audio src="songs/Mallipoo Video Song _ VTK _ HDR _ Silambarasan TR _ Gautham Vasudev Menon _   _A. R. Rahman _ Vels(MP3_160K).mp3"></audio><img src="https://i.ytimg.com/vi/MrzkoLKpgLU/maxresdefault.jpg" style="display: none;"></div>
-
-                    <div><span>Manase _ Official Music Video _ Dhruv Vikram _ Ujwal Gupta(MP3_160K).mp3</span><span>Album</span><span>Dhruv vikram</span><span>4.39</span><audio src="songs/Manase _ Official Music Video _ Dhruv Vikram _ Ujwal Gupta(MP3_160K).mp3"></audio><img src="https://i.ytimg.com/vi/ggjfqDPqLAk/mqdefault.jpg" style="display: none;"></div>
-
-                    <div><span>Maroon 5 - Animals (Lyrics)(M4A_128K).m4a</span><span>Album Maroon-5</span><span>Maroon</span><span>4.24</span><audio src="songs/Maroon 5 - Animals (Lyrics)(M4A_128K).m4a"></audio><img src="https://storage.googleapis.com/c.directlyrics.com/img/upload/maroon-5-animals-2.jpg" style="display: none;"></div>
-
-                    <div><span>Megham Karukatha - Official Lyric Video _ Thiruchi… _ Dhanush _ Anirudh _ Sun Pictures(MP3_160K).mp3</span><span>Thiruchitrambalam</span><span>Dhanush</span><span>4.50</span><audio src="songs/Megham Karukatha - Official Lyric Video _ Thiruchitrambalam _ Dhanush _ Anirudh _ Sun Pictures(MP3_160K).mp3"></audio><img src="https://i.ytimg.com/vi/hcJAgXUgFLY/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGEgSChlMA8=&amp;rs=AOn4CLBcrIJzxlY_MKyQvhNT9Za3gH5Diw" style="display: none;"></div>
-
-                    <div><span>mudhal nee mudivum nee lyrics _ darbuka siva _ _ki… sriram _ meetha raghunath _ Harish(M4A_128K).m4a</span><span>Mudhal nee mudivum nee</span><span>Sid sriram</span><span>5.08</span><audio src="songs/mudhal nee mudivum nee lyrics _ darbuka siva _ _kishen das _ Sid sriram _ meetha raghunath _ Harish(M4A_128K).m4a"></audio><img src="https://i.ytimg.com/vi/uZ3OklmL0QE/maxresdefault.jpg" style="display: none;"></div>
-
-                    <div><span>Hey Baby Video Song _ Raja Rani _ Aarya_ Jai_ Nayanthara_ Nazriya Nazim(M4A_128K).m4a</span><span>Raja rani</span><span>Unknown artist</span><span>2.54</span><audio src="songs/Official _ Hey Baby Video Song _ Raja Rani _ Aarya_ Jai_ Nayanthara_ Nazriya Nazim(M4A_128K).m4a"></audio><img src="https://i.ytimg.com/vi/REg_fqqzt_E/mqdefault.jpg" style="display: none;"></div>
-
-                    <div><span>Pouraadalaam Full Video Song _ M.S.Dhoni-Tamil _ Sushant Singh Rajput_ Kiara Advani(M4A_128K).m4a</span><span>M.S.Dhoni</span><span>Unknown artist</span><span>3.30</span><audio src="songs/Pouraadalaam Full Video Song _ M.S.Dhoni-Tamil _ Sushant Singh Rajput_ Kiara Advani(M4A_128K).m4a"></audio><img src="https://i.ytimg.com/vi/ve2xFAxViuw/maxresdefault.jpg" style="display: none;"></div>
-
-                    <div><span>Rolex Entry Bgm _ Rolex Entry Full Bgm _ Lokiverse Bgm _ [Download Link](MP3_320K).mp3</span><span>Vikram</span><span>Unknown artist</span><span>3.20</span><audio src="songs/Rolex Entry Bgm _ Rolex Entry Full Bgm _ Lokiverse Bgm _ [Download Link](MP3_320K).mp3"></audio><img src="https://i.ytimg.com/vi/iCcPbnYF22w/maxresdefault.jpg" style="display: none;"></div>
-
-                    <div><span>Teddy _ En Iniya Thanimaye Song Lyric Video _ Arya(MP3_160K).mp3</span><span>Teddy</span><span>Sid sriram</span><span>4.47</span><audio src="songs/Teddy _ En Iniya Thanimaye Song Lyric Video _ Arya(MP3_160K).mp3"></audio><img src="https://m.timesofindia.com/photo/81292001/size-143830/81292001.jpg" style="display: none;"></div>
-
-                    <div><span>Thani Oruvan - Kadhal Cricket Lyric _ Jayam Ravi_ Nayanthara _ Hiphop Tamizha(MP3_160K).mp3</span><span>Thani Oruvan</span><span>Hip hop Tamizha</span><span>3.34</span><audio src="songs/Thani Oruvan - Kadhal Cricket Lyric _ Jayam Ravi_ Nayanthara _ Hiphop Tamizha(MP3_160K).mp3"></audio><img src="https://i.ytimg.com/vi/xzxr6fxdI_E/maxresdefault.jpg" style="display: none;"></div>
-
-                    <div><span>Yelo Pullelo - Kannum Kannum Kollaiyadithaal _ Dul…Rakshan_Niranjani A _ Masala Coffee(M4A_128K).m4a</span><span>Kannum Kannum kollayadithal</span><span>Anirudh ravichander</span><span>3.16</span><audio src="songs/Yelo Pullelo - Kannum Kannum Kollaiyadithaal _ Dulquer S_ Ritu V_Rakshan_Niranjani A _ Masala Coffee(M4A_128K).m4a"></audio><img src="https://i.ytimg.com/vi/QDuGeXJdyd0/maxresdefault.jpg" style="display: none;"></div>
-
-                    <div><span>Sia- Never give up (music video)(MP3_160K).mp3</span><span>Album-Sia</span><span>Sia</span><span>3.38</span><audio src="songs/Sia- Never give up (music video)(MP3_160K).mp3"></audio><img src="https://i.ytimg.com/vi/FvRiOGRty9I/maxresdefault.jpg" style="display: none;"></div>
-
-                    <div><span>Sandhanam Theme Video - Vikram _ Kamal Haasan _ ANIRUDH RAVICHANDER _ Lokesh Kanagaraj(M4A_128K).m4a</span><span>Vikram</span><span>Anirudh ravichander</span><span>1.43</span><audio src="songs/Sandhanam Theme Video - Vikram _ Kamal Haasan _ ANIRUDH RAVICHANDER _ Lokesh Kanagaraj(M4A_128K).m4a"></audio><img src="https://i.ytimg.com/vi/SRoipNO7IoI/maxresdefault.jpg" style="display: none;"></div>  
-                    -->
+                    <!-- song lists are created here by javascript -->
                 </div>  
             </section>
             <!-- music section ends here -->
-            <section class="video section" id="video">video</section>
-            <section class="playqueue section" id="playqueue">playqueue</section>
-            <section class="playlist section" id="playlist">playlist</section>
+            <section class="video section" id="video"><h1>Video Library is in progress..</h1></section>
+            <section class="playqueue section" id="playqueue"><h1>Playqueue is in progress..</h1></section>
+            <section class="playlist section" id="playlist"><h1>Playlist is in progress..</h1></section>
         </div>
     <!-- right portion of the section ends here -->
     </section>
@@ -591,9 +159,6 @@
     <!-- <script src="groove.js"></script> -->
     <script src="section.js"></script> 
     <script src="groove_main.js"></script>
-
-
-    l
 
 </body>
 </html>

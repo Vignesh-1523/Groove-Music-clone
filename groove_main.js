@@ -16,14 +16,14 @@ let suffle = document.querySelector("#suffle-img");
 let loop = document.querySelector("#repeat-img");
 
 let music_content = document.getElementById("musicContent");
-
+let home_content = document.getElementById("homeContent");
 
 
 
 
 
 let songArray = [];
-/* let songDetails = [
+ let songDetails = [
     ['Music from the Villain_s Point of View  - Beauty of Our Bane(MP3_160K).mp3', 'The Dark Knight', 'Unknown artist', '4.55', 'songs/Music from the Villain_s Point of View  - Beauty of Our Bane(MP3_160K).mp3', 'https://i.ytimg.com/vi/CunU1BiAv7Q/maxresdefault.jpg'],
     ['Chilla Chilla - Thunivu Lyric Song (Tamil) _ Ajith…umar _ H Vinoth _ Anirudh _ Ghibran(MP3_160K).mp3', 'Thunivu', 'Anirudh ravichander', '3.53', 'songs/Chilla Chilla - Thunivu Lyric Song (Tamil) _ Ajith Kumar _ H Vinoth _ Anirudh _ Ghibran(MP3_160K).mp3', 'https://static.moviecrow.com/gallery/20221212/209569-Thunivu%20Chilla%20Chilla.jpg'],
     ['Anjaan - Kadhal Aasai Video _ Suriya_ Samantha _ Yuvan _ Super Hit Love Song(MP3_160K).mp3', 'Anjaan', 'Yuvan', '5.04', 'songs/Anjaan - Kadhal Aasai Video _ Suriya_ Samantha _ Yuvan _ Super Hit Love Song(MP3_160K).mp3', 'https://i.ytimg.com/vi/UdZzW6QzN-s/maxresdefault.jpg'],
@@ -57,11 +57,85 @@ let songArray = [];
     ['Yelo Pullelo - Kannum Kannum Kollaiyadithaal _ Dul…Rakshan_Niranjani A _ Masala Coffee(M4A_128K).m4a', 'Kannum Kannum kollayadithal', 'Anirudh ravichander', '3.16', 'songs/Yelo Pullelo - Kannum Kannum Kollaiyadithaal _ Dulquer S_ Ritu V_Rakshan_Niranjani A _ Masala Coffee(M4A_128K).m4a', 'https://i.ytimg.com/vi/QDuGeXJdyd0/maxresdefault.jpg'],
     ['Sia- Never give up (music video)(MP3_160K).mp3', 'Album-Sia', 'Sia', '3.38', 'songs/Sia- Never give up (music video)(MP3_160K).mp3', 'https://i.ytimg.com/vi/FvRiOGRty9I/maxresdefault.jpg'],
     ['Sandhanam Theme Video - Vikram _ Kamal Haasan _ ANIRUDH RAVICHANDER _ Lokesh Kanagaraj(M4A_128K).m4a', 'Vikram', 'Anirudh ravichander', '1.43', 'songs/Sandhanam Theme Video - Vikram _ Kamal Haasan _ ANIRUDH RAVICHANDER _ Lokesh Kanagaraj(M4A_128K).m4a', 'https://i.ytimg.com/vi/SRoipNO7IoI/maxresdefault.jpg']
-];  */
+];  
 
 var currentSongIndex = 0;
 var list;
-songContainer.forEach((e, index) => {
+var box;
+var box_card;
+var box_media;
+songDetails.forEach((e, index) => {
+    const audioSrc = e[4];
+    console.log(audioSrc);
+    songArray.push(audioSrc);
+
+listCreation();
+
+function listCreation() {
+    list = document.createElement('div');
+
+    for (let i = 0; i < 4; i++) {
+      list.appendChild(document.createElement('span'));
+    }
+
+    let audioFile = document.createElement('audio');
+    list.appendChild(audioFile);
+    audioFile.src = e[4];
+
+    let imageFile = document.createElement('img');
+    imageFile.style.display = "none";
+    list.appendChild(imageFile);
+    imageFile.src = e[5];
+
+    // here we select all the four span elements created inside the div element..
+    let spanElements = list.querySelectorAll('span');
+    let x = 0;
+    spanElements.forEach(span => {
+      span.innerHTML = e[x];
+      x++;
+    });
+    
+    music_content.appendChild(list);
+
+
+    // creating home media-container for each song.
+  box = document.createElement('div');
+  box.classList.add("media-container");
+
+  box_card = document.createElement('div');
+  box_card.classList.add("media-card");
+
+  let box_img = document.createElement('img');
+  box_card.appendChild(box_img);
+
+  box_media = document.createElement('div');
+  box_media.classList.add("media-contents");
+
+  var media_title = document.createElement('p');
+  media_title.classList.add("media-title");
+
+  var media_artist = document.createElement('span');
+  media_artist.classList.add("media-artist");
+
+  box_media.appendChild(media_title);
+  box_media.appendChild(media_artist);
+
+  box.appendChild(box_card);
+  box.appendChild(box_media);
+       
+  let audioFile2 = document.createElement('audio');
+  box.appendChild(audioFile2);
+  audioFile2.src = e[4];  
+        
+  box_img.src = e[5];
+  media_title.innerHTML = e[0];
+  media_artist.innerHTML = e[2];
+       
+  home_content.appendChild(box);
+  }  
+})
+  
+ /* songContainer.forEach((e, index) => {
     const audioSrc = e.querySelector('audio').src;
     songArray.push(audioSrc);
         e.addEventListener('click', () => {
@@ -75,43 +149,29 @@ songContainer.forEach((e, index) => {
     }); 
 //  I commented this because in live server it works properly but from github live link it doesn't because song loading is not proper...
  
-/* listCreation();
-
  
-function listCreation() {
-    list = document.createElement('div');
-
-    for (let i = 0; i < 4; i++) {
-      list.appendChild(document.createElement('span'));
-    }
-
-    let audioFile = document.createElement('audio');
-    list.appendChild(audioFile);
-    audioFile.src = songDetails[index][4];
-
-    let imageFile = document.createElement('img');
-    imageFile.style.display = "none";
-    list.appendChild(imageFile);
-    imageFile.src = e.querySelector('img').src;
-
-    // here we select all the four span elements created inside the div element..
-    let spanElements = list.querySelectorAll('span');
-    let x = 0;
-    spanElements.forEach(span => {
-      span.innerHTML = songDetails[index][x];
-      x++;
-    });
-    
-    music_content.appendChild(list);
-  }   */
-}); 
+});  */
 
 // console.log(songDetails);
 
 
   // this has all created div elements - lists in it.
   let totalList = music_content.querySelectorAll('div');
+  let totalBox = home_content.querySelectorAll('.media-container');
 
+  totalBox.forEach((box, index) => {
+    box.addEventListener('click', () => {
+        songImage.src = box.querySelector('img').src;
+        // queryselectorAll get all span elements but simply querySelector will point the first span element.
+        largeSongName.innerHTML = box.querySelector('.media-title').innerHTML;
+        smallSongName.innerHTML = box.querySelector('.media-title').innerHTML;
+        
+        audioPlayer.src = box.querySelector('audio').src;
+        console.log(audioPlayer);
+        playSong();
+        currentSongIndex = index;
+      })    
+  }) 
   totalList.forEach((list, index) => {
     list.addEventListener('click', () => {
         songImage.src = list.querySelector('img').src;
@@ -132,9 +192,9 @@ function listCreation() {
 }  */
 
 function changeDatas() {
-    songImage.src = songContainer[currentSongIndex].querySelector('img').src;
-    largeSongName.innerHTML = songContainer[currentSongIndex].querySelector('p').innerHTML;
-    smallSongName.innerHTML = songContainer[currentSongIndex].querySelector('p').innerHTML;
+    songImage.src = totalBox[currentSongIndex].querySelector('img').src;
+    largeSongName.innerHTML = totalBox[currentSongIndex].querySelector('p').innerHTML;
+    smallSongName.innerHTML = totalBox[currentSongIndex].querySelector('p').innerHTML;
 }
 
 console.log(songArray);

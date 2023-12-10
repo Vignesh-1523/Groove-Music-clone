@@ -10,28 +10,21 @@
 }
 .video{
     background: #242424;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: rgb(204, 204, 204);
     display: none;
 }
 .playqueue{
     background: #242424;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: rgb(204, 204, 204);
     display: none;
 }
 .playlist{
     background: #242424;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: rgb(204, 204, 204);
     display: none;
 }
 .video h1, .playqueue h1, .playlist h1{
     font-size: 3em;
+    margin-top: 50px;
+    margin-left: 100px;
 }

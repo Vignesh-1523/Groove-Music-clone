@@ -108,6 +108,11 @@ send.addEventListener('click', () => {
     list.appendChild(audioFile);
     audioFile.src = single_song[5];
 
+    let imageFile = document.createElement('img');
+    imageFile.style.display = "none";
+    list.appendChild(imageFile);
+    imageFile.src = single_song[4];
+
     // here we select all the four span elements created inside the div element..
     let spanElements = list.querySelectorAll('span');
     let index = 0;
@@ -169,16 +174,23 @@ send.addEventListener('click', () => {
   // eventlisteners to add the song source to general audio's source...
   box.addEventListener('click', () => {
     audioPlayer.src = box.querySelector('audio').src;
+    songImage.src = box.querySelector('img').src;
+    largeSongName.innerHTML = box.querySelector('.media-title').innerHTML;
+    smallSongName.innerHTML = box.querySelector('.media-title').innerHTML;
     console.log(audioPlayer);
   })
 
   list.addEventListener('click', () => {
     audioPlayer.src = list.querySelector('audio').src;
+    songImage.src = list.querySelector('img').src;
+    largeSongName.innerHTML = list.querySelector('span').innerHTML;
+    smallSongName.innerHTML = list.querySelector('span').innerHTML;
     console.log(audioPlayer);
   })
 
 })
-    
+  
+/*
 // song timeLine in footer..
 let playingDuration = document.getElementById("playingDuration");
 let totalDuration = document.getElementById("totalDuration");
@@ -236,3 +248,5 @@ durationRange.addEventListener('input', () => {
 // Storing data in local storage..
 localStorage.setItem('all_songs', JSON.stringify(all_songs));
 // right now it is incomplete, soon code for local storage will be given..
+
+*/

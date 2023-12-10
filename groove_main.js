@@ -9,7 +9,6 @@ let songImage = document.querySelector("#temp_img");
 let largeSongName = document.querySelector(".large");
 let smallSongName = document.querySelector(".small");
 
-
 let previous = document.querySelector("#previous-img");
 let next = document.querySelector("#next-img");
 let suffle = document.querySelector("#suffle-img");
@@ -18,12 +17,8 @@ let loop = document.querySelector("#repeat-img");
 let music_content = document.getElementById("musicContent");
 let home_content = document.getElementById("homeContent");
 
-
-
-
-
 let songArray = [];
- let songDetails = [
+let songDetails = [
     ['Music from the Villain_s Point of View  - Beauty of Our Bane(MP3_160K).mp3', 'The Dark Knight', 'Unknown artist', '4.55', 'songs/Music from the Villain_s Point of View  - Beauty of Our Bane(MP3_160K).mp3', 'https://i.ytimg.com/vi/CunU1BiAv7Q/maxresdefault.jpg'],
     ['Chilla Chilla - Thunivu Lyric Song (Tamil) _ Ajith…umar _ H Vinoth _ Anirudh _ Ghibran(MP3_160K).mp3', 'Thunivu', 'Anirudh ravichander', '3.53', 'songs/Chilla Chilla - Thunivu Lyric Song (Tamil) _ Ajith Kumar _ H Vinoth _ Anirudh _ Ghibran(MP3_160K).mp3', 'https://static.moviecrow.com/gallery/20221212/209569-Thunivu%20Chilla%20Chilla.jpg'],
     ['Anjaan - Kadhal Aasai Video _ Suriya_ Samantha _ Yuvan _ Super Hit Love Song(MP3_160K).mp3', 'Anjaan', 'Yuvan', '5.04', 'songs/Anjaan - Kadhal Aasai Video _ Suriya_ Samantha _ Yuvan _ Super Hit Love Song(MP3_160K).mp3', 'https://i.ytimg.com/vi/UdZzW6QzN-s/maxresdefault.jpg'],
@@ -31,23 +26,24 @@ let songArray = [];
     ['VIKRAM - Porkanda Singam Lyric _ Kamal Haasan _ Vi…upathi _ Lokesh Kanagaraj _ Anirudh(M4A_128K).m4a', 'Vikram', 'Unknown artist', '3.18', 'songs/VIKRAM - Porkanda Singam Lyric _ Kamal Haasan _ Vijay Sethupathi _ Lokesh Kanagaraj _ Anirudh(M4A_128K).m4a', 'https://c.saavncdn.com/342/Porkanda-Singam-Rendition-Tamil-2023-20230117160839-500x500.jpg'],
     ['Amar Theme Video _ Kamal Haasan _ ANIRUDH RAVICHAN…R _ Fahadh Fazil _ Lokesh Kanagaraj(M4A_128K).m4a', 'Vikram', 'Anirudh ravichander', '2.26', 'songs/Amar Theme Video _ Kamal Haasan _ ANIRUDH RAVICHANDER _ Fahadh Fazil _ Lokesh Kanagaraj(M4A_128K).m4a', 'https://c.saavncdn.com/artists/Fahadh_Faasil_002_20200321095850_500x500.jpg'],
     ['Edharkadi Lyrical _ Adithya Varma Songs _ Dhruv Vi…_Banita Sandhu_ Gireesaaya _ Radhan(MP3_160K).mp3', 'Aditya varma', 'Dhruv vikram', '4.13', 'songs/Edharkadi Lyrical _ Adithya Varma Songs _ Dhruv Vikram_Banita Sandhu_ Gireesaaya _ Radhan(MP3_160K).mp3', 'https://i.ytimg.com/vi/VsfYxPqSclE/maxresdefault.jpg'],
-    ['Yaen Yennai Pirindhaai Song_Lyrics _ SidSriram _ Adithya Varma _ Full Hd(M4A_128K).m4a', 'Aditya varma', 'Sid sriram', '3.18', 'songs/Yaen Yennai Pirindhaai Song_Lyrics _ SidSriram _ Adithya Varma _ Full Hd(M4A_128K).m4a', 'https://is1-ssl.mzstatic.com/image/thumb/Music113/…5b-922b-24eb-39fe8f19d1a9/cover.jpg/400x400cc.jpg'],
-    ['ADITHYA VARMA _ SAD BGM _ WHATSAPP STATUS _ CRACKE…ilure _pain _lonely _whatsappstatus(MP3_160K).mp3', 'Aditya varma', 'Unknown artist', '1.00', 'songs/ADITHYA VARMA _ SAD BGM _ WHATSAPP STATUS _ CRACKER EDITZ _lovefailure _pain _lonely _whatsappstatus(MP3_160K).mp3', 'https://e0.pxfuel.com/wallpapers/421/522/desktop-w…ve-graphy-creative-profile-adithya-varma-love.jpg'],
+    ['Yaen Yennai Pirindhaai Song_Lyrics _ SidSriram _ Adithya Varma _ Full Hd(M4A_128K).m4a', 'Aditya varma', 'Sid sriram', '3.18', 'songs/Yaen Yennai Pirindhaai Song_Lyrics _ SidSriram _ Adithya Varma _ Full Hd(M4A_128K).m4a', 'https://i.scdn.co/image/ab67616d0000b273ff9fedb09c09fea02a7108af'],
+    ['ADITHYA VARMA _ SAD BGM _ WHATSAPP STATUS _ CRACKE…ilure _pain _lonely _whatsappstatus(MP3_160K).mp3', 'Aditya varma', 'Unknown artist', '1.00', 'songs/ADITHYA VARMA _ SAD BGM _ WHATSAPP STATUS _ CRACKER EDITZ _lovefailure _pain _lonely _whatsappstatus(MP3_160K).mp3', 'https://static.toiimg.com/photo/71740879.cms'],
     ['Aaron Smith - Dancin (KRONO Remix) - Lyrics(M4A_128K).m4a', 'Album', 'Aaron smith', '3.51', 'songs/Aaron Smith - Dancin (KRONO Remix) - Lyrics(M4A_128K).m4a', 'https://i.ytimg.com/vi/Cjp6RVrOOW0/maxresdefault.jpg'],
-    ['[Moonknight] - A man without love(M4A_128K).m4a', 'Moon knight', 'Unknown artist', '3.17', 'songs/[Moonknight] - A man without love(M4A_128K).m4a', 'https://www.slashfilm.com/img/gallery/every-song-w…d-in-moon-knight-episode-1/l-intro-1648657429.jpg'],
+    ['[Moonknight] - A man without love(M4A_128K).m4a', 'Moon knight', 'Unknown artist', '3.17', 'songs/[Moonknight] - A man without love(M4A_128K).m4a', 'https://i.scdn.co/image/ab67616d0000b273ccaa1e191b8a58e09882a028'],
     ['Cobra - Adheeraa Lyric _ Chiyaan Vikram _ _A. R. R…_ Ajay Gnanamuthu _ 7 Screen Studio(M4A_128K).m4a', 'Cobra', 'Unknown artist', '4.51', 'songs/Cobra - Adheeraa Lyric _ Chiyaan Vikram _ _A. R. Rahman  _ Ajay Gnanamuthu _ 7 Screen Studio(M4A_128K).m4a', 'https://i.ytimg.com/vi/ZQsI6m66Xdo/maxresdefault.jpg'],
     ['Don Omar - Danza Kuduro (Lyrics) ft. Lucenzo(M4A_128K).m4a', 'Fast and Furious', 'Don omar', '3.17', 'songs/Don Omar - Danza Kuduro (Lyrics) ft. Lucenzo(M4A_128K).m4a', 'https://m.media-amazon.com/images/I/612kccwPz-L._UXNaN_FMjpg_QL85_.jpg'],
     ['SAJAN BADE SENTI _ Badhaai Ho _ A…mann K _ Sanya M _ Dev N _ Harjot K(MP3_160K).mp3', 'Badhaai Ho', 'Hajrot k', '2.45', 'songs/Full Song_ SAJAN BADE SENTI _ Badhaai Ho _ Ayushmann K _ Sanya M _ Dev N _ Harjot K(MP3_160K).mp3', 'https://i.ytimg.com/vi/zIezTPSg_Uc/maxresdefault.jpg'],
     ['Mehabooba (Tamil) KGF Chapter 2 _ RockingStar Yash _ Prashanth Neel _ Ravi Basrur(M4A_128K).m4a', 'K G F Chapter-2', 'Unknown artist', '4.02', 'songs/Full Video_ Mehabooba (Tamil) KGF Chapter 2 _ RockingStar Yash _ Prashanth Neel _ Ravi Basrur(M4A_128K).m4a', 'https://i1.sndcdn.com/artworks-2fjnGhnBP5kKQiik-HejZmg-t500x500.jpg'],
     ['Glass Animals - Heat Waves (Lyrics)(M4A_128K).m4a', 'Album-Glass Animals', 'Unknown artist', '3.56', 'songs/Glass Animals - Heat Waves (Lyrics)(M4A_128K).m4a', 'https://i.ytimg.com/vi/mRD0-GxqHVo/hqdefault.jpg?v=648204f5'],
     ['JAILER - Hukum Lyric Video _ Superstar Rajinikanth _ Sun Pictures _ Anirudh _ Nelson(M4A_128K).m4a', 'Jailer', 'Anirudh ravichander', '3.26', 'songs/JAILER - Hukum Lyric Video _ Superstar Rajinikanth _ Sun Pictures _ Anirudh _ Nelson(M4A_128K).m4a', 'https://i.ytimg.com/vi/1F3hm6MfR1k/sddefault.jpg'],
-    ['John Wick Bgm Ringtone __ Ringztube __ [ Download Link -- ](MP3_160K).mp3', 'John wick', 'Unknown artist', '0.35', 'songs/John Wick Bgm Ringtone __ Ringztube __ [ Download Link -- ](MP3_160K).mp3', 'https://images03.military.com/sites/default/files/…05/1time%20john%20wick%205%20announced%201200.jpg'],
+    ['John Wick Bgm Ringtone __ Ringztube __ [ Download Link -- ](MP3_160K).mp3', 'John wick', 'Unknown artist', '0.35', 'songs/John Wick Bgm Ringtone __ Ringztube __ [ Download Link -- ](MP3_160K).mp3', 'https://wallpapers.com/images/hd/cool-hd-john-wick-and-guns-fkurzl5x5t5vakvg.jpg'],
     ['Kesariya - Brahmāstra _ Ranbir Kapoor _ Alia Bhatt…Arijit Singh _ Amitabh Bhattacharya(M4A_128K).m4a', 'Brahmastra', 'Unknown artist', '2.52', 'songs/Kesariya - Brahmāstra _ Ranbir Kapoor _ Alia Bhatt _ Pritam _ Arijit Singh _ Amitabh Bhattacharya(M4A_128K).m4a', 'https://upload.wikimedia.org/wikipedia/en/3/3c/Kesariya_song_cover.jpg'],
-    ['Malang Sajna [LYRICS]_ Sachet-Parampara _ Adil Shaikh_ Kumaar _ Lyrical India __ _347(MP3_160K).mp3', 'Sachet-parampara', 'Unknown artist', '2.32', 'songs/Malang Sajna [LYRICS]_ Sachet-Parampara _ Adil Shaikh_ Kumaar _ Lyrical India __ _347(MP3_160K).mp3', 'https://www.koimoi.com/wp-content/new-galleries/20…parampara-tease-latest-track-malang-sajna-001.jpg'],
+    ['Malang Sajna [LYRICS]_ Sachet-Parampara _ Adil Shaikh_ Kumaar _ Lyrical India __ _347(MP3_160K).mp3', 'Sachet-parampara', 'Unknown artist', '2.32', 'songs/Malang Sajna [LYRICS]_ Sachet-Parampara _ Adil Shaikh_ Kumaar _ Lyrical India __ _347(MP3_160K).mp3', 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhLIfjuM-qS4MMZY-HX3rorOZBd25Db4Naos2i2iMwy3P8LdC2q8EuHQxoex_EMRv41gAQ3CYTviSnL58WNYdw_NUfDl7dUF4t2C5U8lVOu2EOKJeFFXjBvv0b-gqXOPn28pczujIEEVaBa3Lz5FKdD0KApti_006hsb4ErgnxJIE5euUv_jA4jmXJy/s1366/Lyricssk.png'],
     ['Mallipoo Video Song _ VTK _ HDR _ Silambarasan TR …udev Menon _   _A. R. Rahman _ Vels(MP3_160K).mp3', 'Vendhu Thaninthathu Kaadu', 'Unknown artist', '4.00', 'songs/Mallipoo Video Song _ VTK _ HDR _ Silambarasan TR _ Gautham Vasudev Menon _   _A. R. Rahman _ Vels(MP3_160K).mp3', 'https://i.ytimg.com/vi/MrzkoLKpgLU/maxresdefault.jpg'],
     ['Manase _ Official Music Video _ Dhruv Vikram _ Ujwal Gupta(MP3_160K).mp3', 'Album', 'Dhruv vikram', '4.39', 'songs/Manase _ Official Music Video _ Dhruv Vikram _ Ujwal Gupta(MP3_160K).mp3', 'https://i.ytimg.com/vi/ggjfqDPqLAk/mqdefault.jpg'],
     ['Maroon 5 - Animals (Lyrics)(M4A_128K).m4a', 'Album Maroon-5', 'Maroon', '4.24', 'songs/Maroon 5 - Animals (Lyrics)(M4A_128K).m4a', 'https://storage.googleapis.com/c.directlyrics.com/img/upload/maroon-5-animals-2.jpg'],
-    ['Megham Karukatha - Official Lyric Video _ Thiruchi… _ Dhanush _ Anirudh _ Sun Pictures(MP3_160K).mp3', 'Thiruchitrambalam', 'Dhanush', '4.50', 'songs/Megham Karukatha - Official Lyric Video _ Thiruchitrambalam _ Dhanush _ Anirudh _ Sun Pictures(MP3_160K).mp3', 'https://i.ytimg.com/vi/hcJAgXUgFLY/maxresdefault.j…GEgSChlMA8=&rs=AOn4CLBcrIJzxlY_MKyQvhNT9Za3gH5Diw'],
+    ['Megham Karukatha - Official Lyric Video _ Thiruchi… _ Dhanush _ Anirudh _ Sun Pictures(MP3_160K).mp3', 'Thiruchitrambalam', 'Dhanush', '4.50', 'songs/Megham Karukatha - Official Lyric Video _ Thiruchitrambalam _ Dhanush _ Anirudh _ Sun Pictures(MP3_160K).mp3', 'https://static.toiimg.com/thumb/msid-94179797,width-1280,resizemode-4/94179797.jpg'],
+    ['Kalapakkaara | king of kotha - Dulquer Salman ..MassTamilan.dev.mp3', 'King of kotha', 'Shreya goshal', '4.12', 'songs/Kalapakkaara-MassTamilan.dev.mp3', 'https://m.timesofindia.com/photo/102237921/size-193639/102237921.jpg'],
     ['mudhal nee mudivum nee lyrics _ darbuka siva _ _ki… sriram _ meetha raghunath _ Harish(M4A_128K).m4a', 'Mudhal nee mudivum nee', 'Sid sriram', '5.08', 'songs/mudhal nee mudivum nee lyrics _ darbuka siva _ _kishen das _ Sid sriram _ meetha raghunath _ Harish(M4A_128K).m4a', 'https://i.ytimg.com/vi/uZ3OklmL0QE/maxresdefault.jpg'],
     ['Hey Baby Video Song _ Raja Rani _ Aarya_ Jai_ Nayanthara_ Nazriya Nazim(M4A_128K).m4a', 'Raja rani', 'Unknown artist', '2.54', 'songs/Official _ Hey Baby Video Song _ Raja Rani _ Aarya_ Jai_ Nayanthara_ Nazriya Nazim(M4A_128K).m4a', 'https://i.ytimg.com/vi/REg_fqqzt_E/mqdefault.jpg'],
     ['Pouraadalaam Full Video Song _ M.S.Dhoni-Tamil _ Sushant Singh Rajput_ Kiara Advani(M4A_128K).m4a', 'M.S.Dhoni', 'Unknown artist', '3.30', 'songs/Pouraadalaam Full Video Song _ M.S.Dhoni-Tamil _ Sushant Singh Rajput_ Kiara Advani(M4A_128K).m4a', 'https://i.ytimg.com/vi/ve2xFAxViuw/maxresdefault.jpg'],
@@ -64,7 +60,7 @@ var list;
 var box;
 var box_card;
 var box_media;
-songDetails.forEach((e, index) => {
+songDetails.forEach((e) => {
     const audioSrc = e[4];
     console.log(audioSrc);
     songArray.push(audioSrc);
@@ -97,8 +93,7 @@ function listCreation() {
     
     music_content.appendChild(list);
 
-
-    // creating home media-container for each song.
+  // creating home media-container for each song.
   box = document.createElement('div');
   box.classList.add("media-container");
 
@@ -135,26 +130,6 @@ function listCreation() {
   }  
 })
   
- /* songContainer.forEach((e, index) => {
-    const audioSrc = e.querySelector('audio').src;
-    songArray.push(audioSrc);
-        e.addEventListener('click', () => {
-        songImage.src = e.querySelector('img').src;
-        largeSongName.innerHTML = e.querySelector('p').innerHTML;
-        smallSongName.innerHTML = e.querySelector('p').innerHTML;
-        audioPlayer.src = audioSrc;
-        
-        playSong();
-        currentSongIndex = index;
-    }); 
-//  I commented this because in live server it works properly but from github live link it doesn't because song loading is not proper...
- 
- 
-});  */
-
-// console.log(songDetails);
-
-
   // this has all created div elements - lists in it.
   let totalList = music_content.querySelectorAll('div');
   let totalBox = home_content.querySelectorAll('.media-container');
@@ -185,19 +160,13 @@ function listCreation() {
       })    
   }) 
 
-/*function changeDatasForList() {
-    songImage.src = totalList[currentSongIndex].querySelector('img').src;
-    largeSongName.innerHTML = totalList[currentSongIndex].querySelector('span').innerHTML;
-    smallSongName.innerHTML = totalList[currentSongIndex].querySelector('span').innerHTML;
-}  */
-
 function changeDatas() {
     songImage.src = totalBox[currentSongIndex].querySelector('img').src;
     largeSongName.innerHTML = totalBox[currentSongIndex].querySelector('p').innerHTML;
     smallSongName.innerHTML = totalBox[currentSongIndex].querySelector('p').innerHTML;
 }
 
-console.log(songArray);
+// console.log(songArray);
 
 var isSuffle = false;
 var suffledSongIndex = [];
@@ -366,5 +335,3 @@ suffle.addEventListener('click', suffleSong);
 
 // Event listener for loop button
 loop.addEventListener('click', loopSong);
-
-

@@ -277,6 +277,13 @@ function updateDuration() {
     thumb.style.left = (percentage) + "%";
     // when 100% left it goes little ahead of the durationRange bar because it is placed at the end of the progress bar so to make it end at the range we subract 1.5% left position from it.
 
+    if(currentTime == duration){
+        playPauseButton.src = "icon-images/play.png"; 
+        playPauseButton.style.width = "28px";
+        playPauseButton.style.height = "28px";
+        playPauseButton.style.marginRight = "15px"; 
+    }
+
     const minutes = Math.floor(currentTime / 60);
     const seconds = Math.floor(currentTime % 60);
     const hours = Math.floor(minutes/3600);
@@ -325,13 +332,3 @@ function playSong() {
 playPauseButton.addEventListener('click', () => {
     playSong();
 });   
-
-// Event listeners for next and previous buttons
-next.addEventListener('click', playNext);
-previous.addEventListener('click', playPrevious);
-
-// Event listener for suffle button
-suffle.addEventListener('click', suffleSong);
-
-// Event listener for loop button
-loop.addEventListener('click', loopSong);

@@ -7,13 +7,14 @@
     <link rel="shortcut icon" href="/icon-images/Music-icon.png" type="image/x-icon">
 
     <title>Groove Music Clone</title>
-    <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" /> -->
 
     <link rel="stylesheet" href="groove.css">
     <link rel="stylesheet" href="right-box.css">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="music.css">
+    <link rel="stylesheet" href="search-page.css">
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -46,6 +47,8 @@
                     <hr>
                     <li><a href="#playqueue"><ion-icon name="albums-outline"></ion-icon> Playqueue</a></li>
                     <li><a href="#playlist"><ion-icon name="filter-outline"></ion-icon> Playlist <!-- <ion-icon name="chevron-down-outline"></ion-icon><ion-icon name="chevron-up-outline"></ion-icon> --></a></li>
+                    <!-- I'm going to make this hidded from navigation menu so that it looks like search page comes from nowhere and so cannot access it directly -->
+                    <li><a href="#search-page" id="atag-for-search-page" style="display: none;">search-page</a></li>
                 </ul>
             </div>
         </div>
@@ -99,7 +102,7 @@
                         <p>Recent media</p> 
                     </div>
                     <div class="add-songs" id="open" onclick="openPopup()">
-                        <!-- <span>add song from folder</span>  -->
+                        <span>add song from folder</span> 
                     </div>
                 </header>
                 <div class="content" id="musicContent">
@@ -110,6 +113,14 @@
             <section class="video section" id="video"><h1>Video Library is in progress..</h1></section>
             <section class="playqueue section" id="playqueue"><h1>Playqueue is in progress..</h1></section>
             <section class="playlist section" id="playlist"><h1>Playlist is in progress..</h1></section>
+            <section class="search-page section" id="search-page">
+                <header>
+                    <div class="head-contents">
+                        <h1>You searched for "<span class="searched-result"></span>"</h1>
+                    </div>
+                </header>
+                <div class="content" id="searchedSongs"></div>
+            </section>
         </div>
     <!-- right portion of the section ends here -->
     </section>
@@ -160,6 +171,7 @@
     <!-- <script src="groove.js"></script>  -->
     <script src="section.js"></script> 
     <script src="groove_main.js"></script>
+    <script src="search-page.js"></script>
 
 </body>
 </html>

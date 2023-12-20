@@ -183,6 +183,7 @@ input[type="file"]::file-selector-button{
     font-weight: 200;
     color: white;
     margin-right: 15px;
+    cursor: default;
 }
 .music .content div span:nth-child(1){
     width: 400px;

@@ -1,0 +1,102 @@
+.search-page{
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+}
+.search-page header{
+    width: 100%;
+    background: #181616;
+    color: white;
+    height: 10em;
+}
+.search-page header .head-contents{
+    position: absolute;
+    width: 100%;
+    margin-top: 35px;
+    /* background: grey; */
+    padding-left: 50px;
+    line-height: 2.2;
+}
+.search-page header h1{
+    font-size: 2.3em;
+    font-weight: 500;
+}
+.search-page .content{
+    max-width: 100%;
+    height: calc(100% - 10em);
+    background-color: #181616;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding: 10px 50px;
+}
+.search-page .content::-webkit-scrollbar{
+    -webkit-appearance: none;
+    width: 5px;
+    padding: 3px;
+}
+.search-page .content::-webkit-scrollbar-track{
+    background-color: var(--mild-grey);
+}
+.search-page .content::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    width: 5px;
+    background: grey; 
+}
+.search-page .content div{
+    width: 100%;
+    /* background-color: white; */
+    padding: 15px;
+    margin-bottom: 15px;
+    height: 45px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search-page .content div span{
+    font-size: 12px;
+    font-weight: 200;
+    color: white;
+    margin-right: 15px;
+    cursor: default;
+    user-select: none;
+}
+.search-page .content div span:nth-child(1){
+    width: 400px;
+    /* background: green; */
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.search-page .content div span:nth-child(2){
+    width: 200px;
+    /* background: red; */
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.search-page .content div span:nth-child(3){
+    width: 200px;
+    /* background: blue; */
+}
+.search-page .content div span:nth-child(4){
+    width: 20px;
+}
+.search-page .content div:nth-child(odd){
+    background-color: rgba(211, 211, 211, 0.199);
+}
+.search-page .content div:hover{
+    background-color: rgba(211, 211, 211, 0.199);
+}
+
+.search-page .content div:hover .lni-play, 
+.search-page .content div:hover .bx-square-rounded{
+    opacity: 1;
+}

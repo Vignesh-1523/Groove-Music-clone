@@ -23,7 +23,16 @@
     <!-- Container of music website starts here -->
     <section>
         <!-- we can see this masking when form appears -->
-        <div class="masking"></div>
+        <div class="masking">
+            <div class="note">
+                <p><span>#</span> You can do all play functions as in normal music application</p>
+
+                <p><span>Note :</span> This music website is bit slower because of time taken to load songs and its details into the website. It may seems like tab is loaded faster but the songs are still in process internally. <br> <span>#</span> So, I request all to wait for songs to load as it takes from 30 sec to nearly a minute to load and request all to handle it slowly while playing and changing songs also take a bit of loading time. <br> <span>#</span> Sometime the connection will become slower, at that moment currently playing song may get stuck for a while (few seconds only). Though the connection is slow, after few seconds it will play properly. I apologize for all those inconvenience.</p>
+                <p> <span>#</span> Added one more feature on 20/12/23 - Now you can search the listed songs and play.</p>
+                    
+                <button onclick="CloseTab()">Close</button>
+            </div>
+        </div>
         
     <!-- left portion of the section starts here -->
         <div class="left-box">
@@ -101,9 +110,9 @@
                         <h1>Music </h1>
                         <p>Recent media</p> 
                     </div>
-                    <div class="add-songs" id="open" onclick="openPopup()">
+                    <!-- <div class="add-songs" id="open" onclick="openPopup()">
                         <span>add song from folder</span> 
-                    </div>
+                    </div> -->
                 </header>
                 <div class="content" id="musicContent">
                     <!-- song lists are created here by javascript -->
@@ -154,20 +163,25 @@
             <div class="control-icons">
                 <img src="icon-images/suffle (1).png" alt="" id="suffle-img" class="controls">
                 <img src="icon-images/back.png" alt="" id="previous-img" class="controls">
-
+    
                 <div class="play-pause">
                     <img src="icon-images/play.png" alt="" id="play-img" class="controls">
-                    <!-- <img src="icon-images/pause.png" alt="" class="controls"> -->
+                    <!-- <img src="icon-images/pause.png" alt="" id="pause-img" class="controls"> -->
                 </div>
-
+    
                 <img src="icon-images/back (2).png" alt="" id="next-img" class="controls">
                 <img src="icon-images/repeat (1).png" alt="" id="repeat-img" class="controls">
             </div>
+            <div class="empty"></div> <!-- to make the controls at center -->
         </div>
-        
     </footer>
 <!-- footer sections ends here -->
 
+<script>
+    function CloseTab() {
+        document.querySelector('.masking').style.display = "none";
+    }
+</script>
     <!-- <script src="groove.js"></script>  -->
     <script src="section.js"></script> 
     <script src="groove_main.js"></script>

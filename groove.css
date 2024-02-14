@@ -111,13 +111,13 @@ footer span{
 
   /* template part in footer */
   .buttons_and_template{
-    width: 80%;
+    width: 100%;
     /* background-color: white; */
     display: flex;
+    justify-content: space-between;
   }
   .template{
     display: flex;
-    width: 535px;
     /* background-color: red; */
     position: relative;
     padding: 5px;
@@ -171,30 +171,41 @@ footer span{
     margin-top: -2px;
   }
   .control-icons{
-    /* background-color: #363636; */
+    width: 250px;
+    height: 30px;
+    /* background-color: #bb5050; */
     padding: 10px;
     display: flex;
     align-items: center;
-    position: relative;
-    margin-top: 20px;
+    justify-content: center;
+    /* position: absolute; */
+    margin: 25px 0 0 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .controls{
+    position: absolute;
     width: 17px;
     height: 17px;
-    margin-inline: 15px;
-    margin-bottom: 4px;
   }
 #suffle-img{
     width: 23px;
     height: 23px;
+    margin-right: 200px;
 }
 #previous-img{
-    margin-right: 20px;
+    margin-right: 100px;
+}
+#next-img{
+margin-left: 100px;
+}
+#repeat-img{
+    margin-left: 200px;
 }
 #play-img{
     width: 28px;
     height: 28px;
-    margin-bottom: -3px;
+    margin: -14px 0 0 -12px;
     z-index: 99;
 }
 .play-pause{
@@ -207,8 +218,8 @@ footer span{
     height: 50px;
     border-radius: 50%;
     background: linear-gradient(115deg, var(--dull-orange), var(--dark-violet));
-    left: 117px;
-    top: 2px;
+    left: 100px;
+    top: -10px;
     z-index: -2;
 }
 .play-pause:before{
@@ -218,11 +229,14 @@ footer span{
     height: 42px;
     border-radius: 50%;
     background: var(--shadowed-black);
-    left: 121px;
-    top: 6px;
+    left: 104px;
+    top: -6px;
     z-index: -1;
 }
-
+.empty{
+    padding: 20px 100px;
+    background-color: var(--right-box-bg);
+}
 /* --------------------------------------------------------------------------------------------------- */
 /* left box css styling starts here */
 .masking{
@@ -230,8 +244,36 @@ footer span{
     height: 100%;
     position: fixed;
     z-index: 90;
-    background-color: rgba(145, 145, 145, 0.705);
+    background-color: rgba(63, 63, 63, 0.705);
+    backdrop-filter: blur(60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
     display: none;
+    color: white;
+}
+.masking p{
+    width: 530px;
+    font-size: 16px;
+    margin-block: 15px;
+    color: rgb(228, 228, 228);
+}
+.masking p span{
+    color: var(--dull-orange);
+    font-size: 20px;
+}
+.masking button{
+    width: 400px;
+    background-color: rgb(39, 39, 39);
+    border: none;
+    border: 1px solid rgba(87, 87, 87, 0.144);
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+    color: white;
+    margin: 50px auto 0 auto;
+    display: block;
 }
 section{
     display: flex;

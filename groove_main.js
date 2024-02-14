@@ -315,16 +315,15 @@ function playSong() {
             console.error("Error playing audio:", e);
         });
         playPauseButton.src = "icon-images/pause.png";
-        playPauseButton.style.width = "24px";
-        playPauseButton.style.height = "24px";
-        playPauseButton.style.marginRight = "19px";
+        playPauseButton.style.width = "25px";
+        playPauseButton.style.height = "25px";
+        playPauseButton.style.margin = "-12px 0 0 -13px"; 
     } else {
         audioPlayer.pause();
         playPauseButton.src = "icon-images/play.png"; 
         playPauseButton.style.width = "28px";
         playPauseButton.style.height = "28px";
-        playPauseButton.style.marginRight = "15px"; 
-        // to avoid icons place shift (little) I give this margin and diff size for both play and pause.
+        playPauseButton.style.margin = "-14px 0 0 -12px"; 
     }
   }
 

@@ -1,4 +1,4 @@
-Windows 10 - Groove Music Application Clone     link: https://vignesh-1523.github.io/Groove-Music-clone/
+[#Windows 10 - Groove Music Application Clone](https://vignesh-1523.github.io/Groove-Music-clone/)
 
 Designed and implemented a fully functional replica of the Windows 10 Groove Music application using HTML, CSS, and JavaScript. This ambitious project seamlessly mirrors the aesthetics and functionalities of the original Groove Music app, bringing the immersive experience of a native music player to the browser. You can do all play functions as in normal music application
 
